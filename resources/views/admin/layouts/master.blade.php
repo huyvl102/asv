@@ -4,9 +4,13 @@
 <body class="layout layout-vertical layout-left-navigation layout-below-toolbar layout-below-footer">
 <main>
     <div id="wrapper">
-        @include('admin.layouts.left')
+        @auth
+            @include('admin.layouts.left')
+        @endauth
         <div class="content-wrapper">
-            @include('admin.layouts.toolbar')
+            @auth
+                @include('admin.layouts.toolbar')
+            @endauth
             <div class="content custom-scrollbar">
                 @yield('content')
 
