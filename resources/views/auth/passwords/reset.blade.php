@@ -14,6 +14,7 @@
             <form name="resetPasswordForm" method="POST" action="{{ route('password.update') }}" novalidate>
                 @csrf
 
+                <input type="hidden" name="token" value="{{ $token }}">
                 <div class="form-group mb-4">
                     <input type="email" name="email"
                            class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"

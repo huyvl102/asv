@@ -10,9 +10,9 @@
             <form name="loginForm" novalidate method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="form-group mb-4">
-                    <input type="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
-                           id="loginFormInputEmail" aria-describedby="emailHelp" placeholder="Input Email"
-                           value="{{ old('email') }}" required/>
+                    <input type="email" name="email" class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
+                           id="loginFormInputEmail" aria-describedby="emailHelp" placeholder=" "
+                           value="{{ old('email') }}"/>
                     <label for="loginFormInputEmail">Email address</label>
                     @if ($errors->has('email'))
                         <div class="invalid-feedback">
@@ -21,8 +21,8 @@
                     @endif
                 </div>
                 <div class="form-group mb-4">
-                    <input type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}"
-                           id="loginFormInputPassword" placeholder="Input Password" required/>
+                    <input type="password" name="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}"
+                           id="loginFormInputPassword" placeholder=" "/>
                     <label for="loginFormInputPassword">Password</label>
                     @if ($errors->has('password'))
                         <div class="invalid-feedback">

@@ -26,7 +26,7 @@
                     <input type="email" name="email"
                            class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
                            id="forgotPasswordFormInputEmail"
-                           aria-describedby="emailHelp" placeholder="Input password" value="{{ old('email') }}"
+                           aria-describedby="emailHelp" placeholder=" " value="{{ old('email') }}"
                            required/>
                     <label for="forgotPasswordFormInputEmail">Email address</label>
                     @if ($errors->has('email'))
