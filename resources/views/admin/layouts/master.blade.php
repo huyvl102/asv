@@ -4,7 +4,7 @@
 <body class="layout layout-vertical layout-left-navigation layout-below-toolbar layout-below-footer">
 <main>
     <div id="wrapper">
-        @auth
+        @auth()
             @include('admin.layouts.left')
         @endauth
         <div class="content-wrapper">
