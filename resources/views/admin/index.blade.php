@@ -11,7 +11,7 @@
                 <div class="row no-gutters align-items-start justify-content-between flex-nowrap">
 
                     <div>
-                        <span class="h2">Welcome back, John!</span>
+                        <span class="h2">Welcome back, {{ Auth::user()->name }}!</span>
                     </div>
 
                     <button type="button" class="sidebar-toggle-button btn btn-icon d-block d-xl-none"

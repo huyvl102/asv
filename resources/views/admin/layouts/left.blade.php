@@ -14,7 +14,7 @@
         <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
 
             <li class="nav-item">
-                <a class="nav-link ripple active" href="index.html" data-url="index.html">
+                <a class="nav-link ripple active" href="{{ route('admin.home') }}" data-url="index.html">
 
                     <i class="icon s-4 icon-tile-four"></i>
 
@@ -33,7 +33,7 @@
                 <ul id="collapse-ecommerce" class='collapse show' role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
 
                     <li class="nav-item">
-                        <a class="nav-link ripple active" href="apps-e-commerce-products.html" data-url="apps-e-commerce-products.html">
+                        <a class="nav-link ripple" href="apps-e-commerce-products.html" data-url="apps-e-commerce-products.html">
 
                             <span>Products</span>
                         </a>
