@@ -4,6 +4,17 @@
 
         <div class="col">
 
+            <div class="row no-gutters align-items-center flex-nowrap">
+
+                <button type="button" class="toggle-aside-button btn btn-icon d-block d-lg-none fuse-ripple-ready" data-fuse-bar-toggle="aside">
+                    <i class="icon icon-menu"></i>
+                </button>
+
+                <div class="toolbar-separator d-block d-lg-none"></div>
+
+                <div class="toolbar-separator"></div>
+
+            </div>
         </div>
 
         <div class="col-auto">
