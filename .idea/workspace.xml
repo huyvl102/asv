@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1c08c9-91b5-4b1f-b99d-af7bd895156e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/left.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/left.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,20 +31,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="319">
+              <caret line="41" column="64" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="22" column="30" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="22" selection-end-column="30" />
+            <state relative-caret-position="472">
+              <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -93,8 +101,9 @@
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/left.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
       </list>
     </option>
   </component>
@@ -323,12 +332,12 @@
       <workItem from="1547612712649" duration="1054000" />
       <workItem from="1547622257127" duration="8760000" />
       <workItem from="1547691860041" duration="11000" />
-      <workItem from="1547691889579" duration="2148000" />
+      <workItem from="1547691889579" duration="2849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13681000" />
+    <option name="totallyTimeSpent" value="14382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -483,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -509,20 +511,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-586" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="22" selection-end-column="30" />
+        <state relative-caret-position="402">
+          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="472">
+          <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="41" column="64" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="78" column="68" selection-start-line="78" selection-start-column="68" selection-end-line="78" selection-end-column="68" />
         </state>
       </provider>
     </entry>

@@ -76,7 +76,7 @@
             <div
                 class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
                 <span class="text mr-sm-2">Already have an account?</span>
-                <a class="link text-secondary" href="pages-auth-login.html">Log in</a>
+                <a class="link text-secondary" href="{{ route('login') }}">Log in</a>
             </div>
 
         </div>

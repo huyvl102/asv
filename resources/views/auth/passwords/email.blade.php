@@ -44,7 +44,7 @@
             </form>
 
             <div class="login row align-items-center justify-content-center mt-8 mb-6 mx-auto">
-                <a class="link text-secondary" href="pages-auth-login.html">Go back to login</a>
+                <a class="link text-secondary" href="{{ route('login') }}">Go back to login</a>
             </div>
 
         </div>
