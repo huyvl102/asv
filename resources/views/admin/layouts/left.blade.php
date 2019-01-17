@@ -25,21 +25,25 @@
 
             <li class="nav-item" role="tab" id="heading-ecommerce">
 
-                <a class="nav-link ripple with-arrow " data-toggle="collapse" data-target="#collapse-ecommerce" href="#"
-                   aria-expanded="true" aria-controls="collapse-ecommerce">
+                <a class="nav-link ripple with-arrow " data-toggle="collapse"
+                   data-target="#collapse-ecommerce" href="#" aria-expanded="false"
+                   aria-controls="collapse-ecommerce">
                     <i class="icon s-4 icon-package"></i>
                     <span>Products</span>
                 </a>
-                <ul id="collapse-ecommerce" class='collapse show' role="tabpanel" aria-labelledby="heading-ecommerce"
+                <ul id="collapse-ecommerce" class='collapse {{ request()->is('admin/product*') ? 'show' : '' }}'
+                    role="tabpanel" aria-labelledby="heading-ecommerce"
                     data-children=".nav-item">
                     <li class="nav-item">
-                        <a class="nav-link ripple" href="{{ route('admin.product.list') }}"
+                        <a class="nav-link ripple {{ request()->is('admin/product') ? 'active' : '' }}"
+                           href="{{ route('admin.product.list') }}"
                            data-url="apps-e-commerce-products.html">
                             <span>List</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ripple " href="{{ route('admin.product.create') }}"
+                        <a class="nav-link ripple {{ request()->is('admin/product/create') ? 'active' : '' }}"
+                           href="{{ route('admin.product.create') }}"
                            data-url="apps-e-commerce-products.html">
                             <span>Create</span>
                         </a>
@@ -47,27 +51,32 @@
                 </ul>
             </li>
 
-            <li class="nav-item" role="tab" id="heading-ecommerce">
+            <li class="nav-item" role="tab" id="heading-categories">
 
-                <a class="nav-link ripple with-arrow " data-toggle="collapse" data-target="#collapse-ecommerce" href="#"
-                   aria-expanded="true" aria-controls="collapse-ecommerce">
+                <a class="nav-link ripple with-arrow collapsed" data-toggle="collapse"
+                   data-target="#collapse-categories" href="#" aria-expanded="false"
+                   aria-controls="collapse-categories">
                     <i class="icon s-4 icon-tag"></i>
                     <span>Categories</span>
                 </a>
-                <ul id="collapse-ecommerce" class='collapse show' role="tabpanel" aria-labelledby="heading-ecommerce"
+                <ul id="collapse-categories" class='collapse {{ request()->is('admin/category*') ? 'show' : '' }}'
+                    role="tabpanel" aria-labelledby="heading-categories"
                     data-children=".nav-item">
                     <li class="nav-item">
-                        <a class="nav-link ripple" href="{{ route('admin.category.list') }}"
+                        <a class="nav-link ripple {{ request()->is('admin/category') ? 'active' : '' }}"
+                           href="{{ route('admin.category.list') }}"
                            data-url="apps-e-commerce-products.html">
                             <span>List</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ripple " href="{{ route('admin.category.create') }}"
+                        <a class="nav-link ripple {{ request()->is('admin/category/create') ? 'active' : '' }}"
+                           href="{{ route('admin.category.create') }}"
                            data-url="apps-e-commerce-products.html">
                             <span>Create</span>
                         </a>
                     </li>
+
                 </ul>
             </li>
         </ul>
