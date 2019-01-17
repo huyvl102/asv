@@ -1,77 +1,84 @@
-@extends('layouts.app')
+@extends('admin.layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+    <div id="register" class="p-8">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+        <div class="form-wrapper md-elevation-8 p-8">
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('name'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="logo bg-secondary">
+                <span>A</span>
             </div>
+
+            <div class="title mt-4 mb-8">Create an account</div>
+
+            <form name="registerForm" method="POST" action="{{ route('register') }}" novalidate>
+                @csrf
+                <div class="form-group mb-4">
+                    <input type="text" name="name" class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
+                           id="registerFormInputName" value="{{ old('name') }}" aria-describedby="nameHelp"/>
+                    <label for="registerFormInputName">Name</label>
+                    @if ($errors->has('name'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('name') }}
+                        </div>
+                    @endif
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="email" name="email"
+                           class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
+                           id="registerFormInputEmail" aria-describedby="emailHelp" value="{{ old('email') }}"/>
+                    <label for="registerFormInputEmail">Email address</label>
+                    @if ($errors->has('email'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('email') }}
+                        </div>
+                    @endif
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="password" name="password"
+                           class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}"
+                           id="registerFormInputPassword"/>
+                    <label for="registerFormInputPassword">Password</label>
+                    @if ($errors->has('password'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('password') }}
+                        </div>
+                    @endif
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="password" name="password_confirmation"
+                           class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}"
+                           id="registerFormInputPasswordConfirm"/>
+                    <label for="registerFormInputPasswordConfirm">Password (Confirm)</label>
+                </div>
+
+                <div class="terms-conditions row align-items-center justify-content-center pt-4 mb-8">
+                    <div class="form-check mr-1 mb-1">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" aria-label="Remember Me"/>
+                            <span class="checkbox-icon"></span>
+                            <span>I read and accept</span>
+                        </label>
+                    </div>
+                    <a href="#" class="text-secondary mb-1">terms and conditions</a>
+                </div>
+
+                <button type="submit" class="submit-button btn btn-block btn-secondary my-4 mx-auto"
+                        aria-label="LOG IN">
+                    CREATE MY ACCOUNT
+                </button>
+
+            </form>
+
+            <div
+                class="login d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                <span class="text mr-sm-2">Already have an account?</span>
+                <a class="link text-secondary" href="pages-auth-login.html">Log in</a>
+            </div>
+
         </div>
     </div>
-</div>
 @endsection

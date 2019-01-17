@@ -22,15 +22,48 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link ripple " href="apps-calendar.html" data-url="index.html">
+            <li class="nav-item" role="tab" id="heading-ecommerce">
 
-                    <i class="icon s-4 icon-calendar-today"></i>
+                <a class="nav-link ripple with-arrow " data-toggle="collapse" data-target="#collapse-ecommerce" href="#" aria-expanded="true" aria-controls="collapse-ecommerce">
 
-                    <span>Calendar</span>
+                    <i class="icon s-4 icon-cart"></i>
+
+                    <span>Ecommerce</span>
                 </a>
+                <ul id="collapse-ecommerce" class='collapse show' role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
+
+                    <li class="nav-item">
+                        <a class="nav-link ripple active" href="apps-e-commerce-products.html" data-url="apps-e-commerce-products.html">
+
+                            <span>Products</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link ripple " href="apps-e-commerce-product.html" data-url="apps-e-commerce-products.html">
+
+                            <span>Product</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link ripple " href="apps-e-commerce-orders.html" data-url="apps-e-commerce-products.html">
+
+                            <span>Orders</span>
+                        </a>
+                    </li>
+
+                </ul>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link ripple " href="apps-todo.html" data-url="apps-e-commerce-products.html">
+
+                    <i class="icon s-4 icon-checkbox-marked"></i>
+
+                    <span>To-Do</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>

@@ -1,47 +1,52 @@
-@extends('layouts.app')
+@extends('admin.layouts.master')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+    <div id="forgot-password" class="p-8">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
+        <div class="form-wrapper md-elevation-8 p-8">
+
+            <div class="logo bg-secondary">
+                <span>A</span>
+            </div>
+
+            <div class="title mt-4 mb-8">Recover your password</div>
+
+            @if (session('status'))
+                <div class="preview-elements">
+                    <div class="alert alert-success" role="alert">
+                        <p>{{ session('status') }}</p>
+                    </div>
+                </div>
+            @endif
+
+            <form name="forgotPasswordForm" method="POST" action="{{ route('password.email') }}" novalidate>
+                @csrf
+
+                <div class="form-group mb-4">
+                    <input type="email" name="email"
+                           class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
+                           id="forgotPasswordFormInputEmail"
+                           aria-describedby="emailHelp" placeholder="Input password" value="{{ old('email') }}"
+                           required/>
+                    <label for="forgotPasswordFormInputEmail">Email address</label>
+                    @if ($errors->has('email'))
+                        <div class="invalid-feedback">
+                            {{ $errors->first('email') }}
                         </div>
                     @endif
-
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
+
+                <button type="submit" class="submit-button btn btn-block btn-secondary mt-8 mb-4 mx-auto"
+                        aria-label="SEND RESET LINK">
+                    SEND RESET LINK
+                </button>
+
+            </form>
+
+            <div class="login row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                <a class="link text-secondary" href="pages-auth-login.html">Go back to login</a>
             </div>
+
         </div>
     </div>
-</div>
 @endsection
