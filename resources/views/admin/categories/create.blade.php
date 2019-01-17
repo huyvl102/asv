@@ -10,7 +10,7 @@
                 <div class="product-image mr-4">
                     <img src="{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}">
                 </div>
-                <div>Product Create</div>
+                <div>Category Create</div>
             </div>
         </div>
         <!-- / HEADER -->
@@ -37,15 +37,10 @@
                                 <label>Categories</label>
                             </div>
 
-                            <div class="form-group">
-                                <input type="file" class="form-control" aria-describedby="product tags">
-                                <label>Import files</label>
-                            </div>
-
                             <button type="button" class="btn btn-secondary fuse-ripple-ready">
                                 SAVE
                             </button>
-                            <a href="{{ route('admin.product.list') }}" class="btn btn-light fuse-ripple-ready">
+                            <a href="{{ route('admin.category.list') }}" class="btn btn-light fuse-ripple-ready">
                                 CANCEL
                             </a>
                         </form>

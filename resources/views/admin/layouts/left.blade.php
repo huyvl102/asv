@@ -47,11 +47,28 @@
                 </ul>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link ripple " href="apps-todo.html" data-url="apps-e-commerce-products.html">
-                    <i class="icon s-4 icon-checkbox-marked"></i>
-                    <span>To-Do</span>
+            <li class="nav-item" role="tab" id="heading-ecommerce">
+
+                <a class="nav-link ripple with-arrow " data-toggle="collapse" data-target="#collapse-ecommerce" href="#"
+                   aria-expanded="true" aria-controls="collapse-ecommerce">
+                    <i class="icon s-4 icon-tag"></i>
+                    <span>Categories</span>
                 </a>
+                <ul id="collapse-ecommerce" class='collapse show' role="tabpanel" aria-labelledby="heading-ecommerce"
+                    data-children=".nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link ripple" href="{{ route('admin.category.list') }}"
+                           data-url="apps-e-commerce-products.html">
+                            <span>List</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ripple " href="{{ route('admin.category.create') }}"
+                           data-url="apps-e-commerce-products.html">
+                            <span>Create</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>

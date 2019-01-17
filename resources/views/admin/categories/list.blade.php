@@ -14,8 +14,8 @@
                             <i class="icon-cube-outline s-6"></i>
                         </div>
                         <div class="logo-text">
-                            <div class="h4">Products</div>
-                            <div class="">Total Products: 20</div>
+                            <div class="h4">Categories</div>
+                            <div class="">Total Categories: 20</div>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <!-- / SEARCH -->
 
                 <div class="col-auto">
-                    <a href="{{ route('admin.product.create') }}" class="btn btn-light">ADD NEW PRODUCT</a>
+                    <a href="{{ route('admin.category.create') }}" class="btn btn-light">ADD NEW CATEGORY</a>
                 </div>
 
             </div>
