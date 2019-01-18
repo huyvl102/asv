@@ -23,8 +23,8 @@ Route::group(['middleware' => ['verified']], function () {
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => array('auth')], function () {
         Route::get('/', 'Admin\HomeController@index')->name('home');
         Route::group(['prefix' => 'profile', 'as' => 'profile.'], function () {
-            Route::get('/', 'Admin\ProductController@index')->name('list');
-            Route::patch('/update/{id?}', 'Admin\ProductController@update')->name('update');
+            Route::get('/', 'Admin\ProfileController@index')->name('list');
+            Route::patch('/update/{id?}', 'Admin\ProfileController@update')->name('update');
         });
         Route::group(['prefix' => 'product', 'as' => 'product.'], function () {
             Route::get('/', 'Admin\ProductController@index')->name('list');

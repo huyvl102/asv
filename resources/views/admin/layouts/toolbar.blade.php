@@ -34,7 +34,7 @@
 
                     <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
 
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{ route('admin.profile.list') }}">
                             <div class="row no-gutters align-items-center flex-nowrap">
                                 <i class="icon-account"></i>
                                 <span class="px-3">My Profile</span>
