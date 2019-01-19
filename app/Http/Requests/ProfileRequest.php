@@ -35,15 +35,15 @@ class ProfileRequest extends FormRequest
         return [
             'old_password.min' => 'Mật khẩu cũ từ 6 ký tự trở lên',
             'old_password.max' => 'Mật khẩu không quá 20 ký tự',
+            'old_password.required' => 'Bạn chưa nhập mật khẩu cũ',
             'new_password.min' => 'Mật khẩu mới phải từ 6 ký tự trở lên',
             'new_password.max' => 'Mật khẩu mới không quá 20 ký tự',
-            'old_password.required' => 'Bạn chưa nhập mật khẩu cũ',
+            'new_password.different' => 'Mật khẩu mới phải khác mật khẩu cũ',
             'new_password.required' => 'Bạn chưa nhập mật khẩu mới',
             'password_confirmation.required' => 'Bạn chưa nhập xác nhận mật khẩu mới',
             'password_confirmation.min' => 'Mật khẩu phải từ 6 ký tự trở lên',
             'password_confirmation.max' => 'Mật khẩu không quá 20 ký tự',
             'password_confirmation.same' => 'Bạn phải nhập giống mật khẩu mới',
-            'new_password.different' => 'Mật khẩu mới phải khác mật khẩu cũ',
         ];
     }
 }

@@ -18,26 +18,50 @@
         <!-- CONTENT -->
         <div class="page-content">
             <div class="tab-content">
-                <div class="tab-pane fade active show" id="basic-info-tab-pane" role="tabpanel" aria-labelledby="basic-info-tab">
+                <div class="tab-pane fade active show" id="basic-info-tab-pane" role="tabpanel"
+                     aria-labelledby="basic-info-tab">
 
                     <div class="card p-6">
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" aria-describedby="product name">
+                        <form action="{{route('admin.category.store')}}" method="POST">
+                            @csrf
+
+                            <div class="form-group {{ $errors->has('name') ? ' is-invalid' : '' }}">
+                                <input name="name" type="text"
+                                       class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                       aria-describedby="product name">
                                 <label>Product Name</label>
+                                @if ($errors->has('name'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('name') }}
+                                    </div>
+                                @endif
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" aria-describedby="product description" rows="5"></textarea>
-                                <label>Product Description</label>
+                                @if (isset($categoryParent) && count($categoryParent))
+                                    <select name="parent_id"
+                                            class="form-control {{ $errors->has('parent_id') ? ' is-invalid' : '' }}"
+                                            id="exampleFormControlSelect1">
+                                        <option>Select parent category</option>
+                                        @foreach($categoryParent as $item)
+                                            <option
+                                                value="{{ $item->id }}" {{ old('parent_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                @else
+                                    <input type="text" class="form-control text-red" aria-describedby="product name"
+                                           value="No parent category" disabled="">
+                                @endif
+                                <label>Parent Category</label>
+                                @if ($errors->has('parent_id'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('parent_id') }}
+                                    </div>
+                                @endif
                             </div>
 
-                            <div class="form-group">
-                                <input type="text" class="form-control" aria-describedby="product categories">
-                                <label>Categories</label>
-                            </div>
-
-                            <button type="button" class="btn btn-secondary fuse-ripple-ready">
+                            <button type="submit" class="btn btn-secondary fuse-ripple-ready">
                                 SAVE
                             </button>
                             <a href="{{ route('admin.category.list') }}" class="btn btn-light fuse-ripple-ready">
