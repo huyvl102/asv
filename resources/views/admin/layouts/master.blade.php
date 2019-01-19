@@ -3,6 +3,7 @@
 @include('admin.layouts.header')
 <body class="layout layout-vertical layout-left-navigation layout-below-toolbar layout-below-footer">
 <main>
+    @include('admin.layouts.alert')
     <div id="wrapper">
         @auth()
             @include('admin.layouts.left')

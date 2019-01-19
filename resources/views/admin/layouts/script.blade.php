@@ -28,3 +28,5 @@
 <script type="text/javascript" src="{{ asset('assets/fuse-html/fuse-html.min.js') }}"></script>
 <!-- Main JS -->
 <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('assets/js/apps/sweetalert2/dist/sweetalert2.js') }}"></script>

@@ -34,48 +34,79 @@
                             <header class="h6 bg-secondary text-auto p-4">
                                 <div class="title">General Information</div>
                             </header>
-
+                            {!! Form::model(Auth::user(), ['method' => 'PATCH','route' => array('admin.profile.update', Auth::user()->id)]) !!}
                             <div class="content p-4">
-
                                 <div class="info-line mb-6">
-                                    <div class="title font-weight-bold mb-1">Gender</div>
-                                    <div class="info">
-                                        <input name="name" type="text" class="form-control" aria-describedby="name">
-                                    </div>
+                                    <div class="title font-weight-bold mb-1">Name</div>
+                                    <input name="name" type="text" disabled=""
+                                           class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                           placeholder=" " required
+                                           value="{{old('name',isset(Auth::user()->name) ? Auth::user()->name:'')}}">
+                                    @if ($errors->has('name'))
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('name') }}
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="info-line mb-6">
                                     <div class="title font-weight-bold mb-1">Email</div>
-                                    <div class="info">
-                                        <input name="email" type="email" class="form-control" aria-describedby="email">
-                                    </div>
+                                    <input name="email" type="text" disabled=""
+                                           class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}"
+                                           placeholder=" " required
+                                           value="{{ old('email', isset(Auth::user()->email) ? Auth::user()->email:'' ) }}">
+                                    @if ($errors->has('email'))
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('email') }}
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="info-line mb-6">
-                                    <div class="title font-weight-bold mb-1">Password</div>
-                                    <div class="info">
-                                        <input name="password" type="password" class="form-control"
-                                               aria-describedby="password">
-                                    </div>
+                                    <div class="title font-weight-bold mb-1">Old Password</div>
+                                    <input name="old_password" type="password"
+                                           class="form-control {{ $errors->has('old_password') ? ' is-invalid' : '' }}"
+                                           placeholder=" ">
+                                    @if ($errors->has('old_password'))
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('old_password') }}
+                                        </div>
+                                    @endif
+                                </div>
+
+                                <div class="info-line mb-6">
+                                    <div class="title font-weight-bold mb-1">New Password</div>
+                                    <input name="new_password" type="password"
+                                           class="form-control {{ $errors->has('new_password') ? ' is-invalid' : '' }}"
+                                           placeholder=" ">
+                                    @if ($errors->has('new_password'))
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('new_password') }}
+                                        </div>
+                                    @endif
                                 </div>
 
                                 <div class="info-line mb-6">
                                     <div class="title font-weight-bold mb-1">Password (Confirm)</div>
-                                    <div class="info">
-                                        <input name="password_confirmation" type="password" class="form-control"
-                                               aria-describedby="password_confirmation">
-                                    </div>
+                                    <input name="password_confirmation" type="password"
+                                           class="form-control {{ $errors->has('password_confirmation') ? ' is-invalid' : '' }}"
+                                           placeholder=" ">
+                                    @if ($errors->has('password_confirmation'))
+                                        <div class="invalid-feedback">
+                                            {{ $errors->first('password_confirmation') }}
+                                        </div>
+                                    @endif
                                 </div>
 
-                                <button type="button" class="btn btn-secondary fuse-ripple-ready">
+                                <button type="submit" class="btn btn-secondary fuse-ripple-ready">
                                     UPDATE MY ACCOUNT
                                 </button>
 
                                 <a href="{{ route('admin.home') }}" class="btn btn-light fuse-ripple-ready">
                                     CANCEL
                                 </a>
-
                             </div>
+                            {!! Form::close() !!}
                         </div>
 
                     </div>
