@@ -6,6 +6,7 @@ use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 
 class CategoryController extends Controller
 {
@@ -14,9 +15,25 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.categories.list');
+        $data['categories'] = Category::select(['categories.*', 'parent.name as parentName'])
+            ->leftJoin('categories as parent', 'parent.id', '=', 'categories.parent_id')
+            ->where('categories.is_deleted', false)
+            ->orderBy('categories.id', 'DESC');
+
+        if ($request->has('keyword')) {
+            $keyword = $request->get('keyword');
+            $data['categories'] = $data['categories']->where(
+                function ($query) use ($keyword) {
+                    $query->orWhere('categories.name', 'like', "%$keyword%");
+                }
+            );
+        }
+
+        $data['categories'] = $data['categories']->orderBy('categories.id')->paginate(15);
+
+        return view('admin.categories.list', $data)->with('i', ($request->input('page', 1) - 1) * 10);
     }
 
     /**
@@ -43,9 +60,7 @@ class CategoryController extends Controller
             $category = new Category();
             $category->name = $request->input('name');
             $category->slug = str_slug($request->input('name'));
-            if ($request->get('parent_id')) {
-                $category->parent_id = $request->get('parent_id');
-            }
+            $category->parent_id = $request->get('parent_id');
             $category->save();
 
             return redirect()->route('admin.category.list')->with([
@@ -76,7 +91,11 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['category'] = Category::findOrFail($id);
+
+        $data['categoryParent'] = Category::where('is_deleted', false)->where('parent_id', null)->orderBy('id', 'DESC')->get();
+
+        return view('admin.categories.edit', $data);
     }
 
     /**
@@ -86,9 +105,18 @@ class CategoryController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->name = $request->input('name');
+        $category->slug = str_slug($request->input('name'));
+        $category->parent_id = $request->get('parent_id');
+        $category->save();
+
+        return redirect()->route('admin.category.list')->with([
+            'level' => 'success',
+            'message' => 'Update category successful !'
+        ]);
     }
 
     /**
@@ -99,6 +127,13 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+        $category->is_deleted = true;
+        $category->update();
+
+        return back()->with([
+            'level' => 'success',
+            'message' => 'Deleted category successfully.'
+        ]);
     }
 }

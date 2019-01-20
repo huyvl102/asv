@@ -23,9 +23,23 @@ class CategoryRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|max:255|unique:categories,name,' . null . ',id,is_deleted,0',
-        ];
+        $id = $this->route('id');
+        switch ($this->method()) {
+            case 'POST':
+                {
+                    return [
+                        'name' => 'required|max:255|unique:categories,name,' . null . ',id,is_deleted,0',
+                    ];
+                }
+            case 'PATCH':
+                {
+                    return [
+                        'name' => 'required|max:255|unique:categories,name,' . $id . ',id,is_deleted,0',
+                    ];
+                }
+            default:
+                break;
+        }
     }
 
     public function messages()
