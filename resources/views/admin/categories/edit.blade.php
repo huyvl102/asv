@@ -22,7 +22,8 @@
                      aria-labelledby="basic-info-tab">
 
                     <div class="card p-6">
-                        <form action="{{route('admin.category.update',$category->id)}}" method="POST">
+                        <form action="{{route('admin.category.update',$category->id)}}" method="POST"
+                              enctype="multipart/form-data">
                             @csrf
                             @method('PATCH')
                             <div class="form-group {{ $errors->has('name') ? ' is-invalid' : '' }}">
@@ -58,6 +59,24 @@
                                 @if ($errors->has('parent_id'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('parent_id') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group {{ $errors->has('image') ? ' is-invalid' : '' }}">
+                                <input name="image" type="file"
+                                       class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
+                                       aria-describedby="image">
+                                <label>Image</label>
+
+                                <img class="product-image" style="width: 100px"
+                                     src="{{url('upload/images/categories')}}/{{$category->image->url}}"
+                                     onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                >
+
+                                @if ($errors->has('image'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('image') }}
                                     </div>
                                 @endif
                             </div>

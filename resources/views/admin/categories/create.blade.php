@@ -37,18 +37,6 @@
                                 @endif
                             </div>
 
-                            <div class="form-group {{ $errors->has('image') ? ' is-invalid' : '' }}">
-                                <input name="image" type="file"
-                                       class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
-                                       aria-describedby="image">
-                                <label>Image</label>
-                                @if ($errors->has('image'))
-                                    <div class="invalid-feedback">
-                                        {{ $errors->first('image') }}
-                                    </div>
-                                @endif
-                            </div>
-
                             <div class="form-group">
                                 @if (isset($categoryParent) && count($categoryParent))
                                     <select name="parent_id"
@@ -69,6 +57,18 @@
                                 @if ($errors->has('parent_id'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('parent_id') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group {{ $errors->has('image') ? ' is-invalid' : '' }}">
+                                <input name="image" type="file"
+                                       class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
+                                       aria-describedby="image">
+                                <label>Image</label>
+                                @if ($errors->has('image'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('image') }}
                                     </div>
                                 @endif
                             </div>
