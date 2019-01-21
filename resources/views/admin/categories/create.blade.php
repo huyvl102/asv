@@ -22,7 +22,7 @@
                      aria-labelledby="basic-info-tab">
 
                     <div class="card p-6">
-                        <form action="{{route('admin.category.store')}}" method="POST">
+                        <form action="{{route('admin.category.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group {{ $errors->has('name') ? ' is-invalid' : '' }}">
@@ -33,6 +33,18 @@
                                 @if ($errors->has('name'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('name') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group {{ $errors->has('image') ? ' is-invalid' : '' }}">
+                                <input name="image" type="file"
+                                       class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
+                                       aria-describedby="image">
+                                <label>Image</label>
+                                @if ($errors->has('image'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('image') }}
                                     </div>
                                 @endif
                             </div>

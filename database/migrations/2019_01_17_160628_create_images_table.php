@@ -15,10 +15,11 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id');
-            $table->string('url');
-            $table->string('size');
-            $table->string('format');
+            $table->integer('product_id')->nullable();
+            $table->integer('category_id')->nullable();
+            $table->string('url')->nullable();
+            $table->string('size')->nullable();
+            $table->string('format')->nullable();
             $table->integer('is_deleted')->default(false);
             $table->timestamps();
         });

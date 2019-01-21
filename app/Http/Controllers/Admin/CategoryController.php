@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
@@ -62,6 +63,18 @@ class CategoryController extends Controller
             $category->slug = str_slug($request->input('name'));
             $category->parent_id = $request->get('parent_id');
             $category->save();
+            if ($request->hasFile('image')) {
+                $image = new Image();
+                $file = $request->file('image');
+                $fileName = $file->getClientOriginalName();
+                $name = md5(($fileName) . date('Y-m-d H:i:s')) . '.' . $file->getClientOriginalExtension();
+                $image->category_id = $category->id;
+                $image->url = $name;
+                $image->size = number_format($file->getSize() / 1024, 1) . ' Kb';
+                $image->format = $file->getClientOriginalExtension();
+                $file->move('upload/images/categories/', $name);
+                $image->save();
+            }
 
             return redirect()->route('admin.category.list')->with([
                 'level' => 'success',
