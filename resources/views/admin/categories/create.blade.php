@@ -25,11 +25,11 @@
                         <form action="{{route('admin.category.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
 
-                            <div class="form-group {{ $errors->has('name') ? ' is-invalid' : '' }}">
+                            <div class="form-group">
                                 <input name="name" type="text"
                                        class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
-                                       aria-describedby="product name">
-                                <label>Product Name</label>
+                                       aria-describedby="product name" value="{{old('name')}}">
+                                <label>Category Name</label>
                                 @if ($errors->has('name'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('name') }}
@@ -61,7 +61,7 @@
                                 @endif
                             </div>
 
-                            <div class="form-group {{ $errors->has('image') ? ' is-invalid' : '' }}">
+                            <div class="form-group">
                                 <input name="image" type="file"
                                        class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
                                        aria-describedby="image">

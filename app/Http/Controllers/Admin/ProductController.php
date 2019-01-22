@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\ProductRequest;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -24,7 +26,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $data['categories'] = Category::where('is_deleted', false)->orderBy('id', 'DESC')->get();
+
+        return view('admin.products.create', $data);
     }
 
     /**
@@ -33,9 +37,9 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        //
+        dd($request);
     }
 
     /**

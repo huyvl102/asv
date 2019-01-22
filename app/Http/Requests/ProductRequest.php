@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -29,14 +29,16 @@ class CategoryRequest extends FormRequest
                 {
                     return [
                         'name' => 'required|max:255|unique:categories,name,' . null . ',id,is_deleted,0',
-                        'image' => 'sometimes|mimes:jpeg,jpg,png,gif|max:100000'
+                        'category_id' => 'required',
+                        'images' => 'required|max:100000'
                     ];
                 }
             case 'PATCH':
                 {
                     return [
                         'name' => 'required|max:255|unique:categories,name,' . $id . ',id,is_deleted,0',
-                        'image' => 'sometimes|mimes:jpeg,jpg,png,gif|max:100000'
+                        'category_id' => 'required',
+                        'images' => 'required|max:100000'
                     ];
                 }
             default:
@@ -47,11 +49,13 @@ class CategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Vui lòng nhập tên danh mục',
-            'name.max' => 'Vui lòng nhập tên danh mục không quá 255 ký tự',
-            'name.unique' => 'Tên danh mục đã tồn tại',
-            'image.mimes' => 'Ảnh chưa đúng định dạng jpeg,jpg,png',
-            'image.max' => 'Ảnh quá dung lượng',
+            'name.required' => 'Vui lòng nhập tên sản phẩm',
+            'name.max' => 'Vui lòng nhập tên sản phẩm không quá 255 ký tự',
+            'name.unique' => 'Tên sản phẩm đã tồn tại',
+            'category_id.required' => 'Vui lòng chọn sản phẩm theo danh mục',
+            'images.mimes' => 'Ảnh chưa đúng định dạng jpeg,jpg,png',
+            'images.max' => 'Ảnh quá dung lượng',
+            'images.required' => 'Vui lòng chọn ảnh sản phẩm',
         ];
     }
 }

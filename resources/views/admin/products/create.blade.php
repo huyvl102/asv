@@ -18,31 +18,74 @@
         <!-- CONTENT -->
         <div class="page-content">
             <div class="tab-content">
-                <div class="tab-pane fade active show" id="basic-info-tab-pane" role="tabpanel" aria-labelledby="basic-info-tab">
+                <div class="tab-pane fade active show" id="basic-info-tab-pane" role="tabpanel"
+                     aria-labelledby="basic-info-tab">
 
                     <div class="card p-6">
-                        <form>
+                        <form action="{{route('admin.product.store')}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+
                             <div class="form-group">
-                                <input type="text" class="form-control" aria-describedby="product name">
+                                <input name="name" type="text"
+                                       class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
+                                       aria-describedby="product name" value="{{old('name')}}">
                                 <label>Product Name</label>
+                                @if ($errors->has('name'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('name') }}
+                                    </div>
+                                @endif
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" aria-describedby="product description" rows="5"></textarea>
+                                <textarea name="description" class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"
+                                          aria-describedby="product description"
+                                          rows="5">{{old('description')}}</textarea>
                                 <label>Product Description</label>
+                                @if ($errors->has('description'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('description') }}
+                                    </div>
+                                @endif
                             </div>
 
                             <div class="form-group">
-                                <input type="text" class="form-control" aria-describedby="product categories">
-                                <label>Categories</label>
+                                @if (isset($categories) && count($categories))
+                                    <select name="category_id"
+                                            class="form-control {{ $errors->has('category_id') ? ' is-invalid' : '' }}"
+                                            id="exampleFormControlSelect1">
+                                        <option value="">Select category</option>
+                                        @foreach($categories as $item)
+                                            <option
+                                                value="{{ $item->id }}" {{ old('category_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                @else
+                                    <input type="text" class="form-control text-red" aria-describedby="product name"
+                                           value="No category" disabled="">
+                                @endif
+                                <label>Category</label>
+                                @if ($errors->has('category_id'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('category_id') }}
+                                    </div>
+                                @endif
                             </div>
 
                             <div class="form-group">
-                                <input type="file" class="form-control" aria-describedby="product tags">
-                                <label>Import files</label>
+                                <input name="images[]" type="file" multiple
+                                       class="form-control {{ $errors->has('images') ? ' is-invalid' : '' }}"
+                                       aria-describedby="images">
+                                <label>Image</label>
+                                @if ($errors->has('images'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('images') }}
+                                    </div>
+                                @endif
                             </div>
 
-                            <button type="button" class="btn btn-secondary fuse-ripple-ready">
+                            <button type="submit" class="btn btn-secondary fuse-ripple-ready">
                                 SAVE
                             </button>
                             <a href="{{ route('admin.product.list') }}" class="btn btn-light fuse-ripple-ready">
