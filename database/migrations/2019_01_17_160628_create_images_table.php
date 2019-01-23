@@ -20,7 +20,6 @@ class CreateImagesTable extends Migration
             $table->string('url')->nullable();
             $table->string('size')->nullable();
             $table->string('format')->nullable();
-            $table->integer('is_deleted')->default(false);
             $table->timestamps();
         });
     }

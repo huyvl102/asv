@@ -127,6 +127,13 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->is_deleted = true;
+        $product->update();
+
+        return back()->with([
+            'level' => 'success',
+            'message' => 'Deleted product successfully!'
+        ]);
     }
 }

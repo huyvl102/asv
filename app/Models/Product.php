@@ -15,6 +15,6 @@ class Product extends Model
 
     public function image()
     {
-        return $this->hasMany('App\Models\Image', 'product_id', 'id')->where('is_deleted', '0');
+        return $this->hasMany('App\Models\Image', 'product_id', 'id');
     }
 }
