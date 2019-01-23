@@ -69,16 +69,18 @@
                                        aria-describedby="image">
                                 <label>Image</label>
 
-                                <img class="product-image" style="width: 100px"
-                                     src="{{url('upload/images/categories')}}/{{$category->image->url}}"
-                                     onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                                >
-
                                 @if ($errors->has('image'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('image') }}
                                     </div>
                                 @endif
+                            </div>
+
+                            <div class="form-group">
+                                <img class="product-image" style="width: 100px"
+                                     src="{{url('upload/images/categories')}}/{{$category->image->url}}"
+                                     onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                >
                             </div>
 
                             <button type="submit" class="btn btn-secondary fuse-ripple-ready">

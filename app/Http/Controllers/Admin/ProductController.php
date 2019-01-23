@@ -91,9 +91,20 @@ class ProductController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function deleteImage($id)
     {
-        //
+        $image = Image::findOrFail($id);
+        $img = public_path('upload/images/products/' . $image->url);
+        if (strlen($image->url) > 0 && file_exists($img)) {
+            unlink($img);
+        }
+
+        $image->delete();
+
+        return back()->with([
+            'level' => 'success',
+            'message' => 'Deleted image successfully!'
+        ]);
     }
 
     /**
@@ -104,7 +115,13 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['product'] = Product::findOrFail($id);
+
+        $data['categories'] = Category::where('is_deleted', false)->orderBy('id', 'DESC')->get();
+
+        $data['images'] = Image::where('product_id', $id)->get();
+
+        return view('admin.products.edit', $data);
     }
 
     /**
@@ -116,7 +133,33 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::findOrFail($id);
+        $product->name = $request->input('name');
+        $product->slug = str_slug($request->input('name'));
+        $product->description = $request->input('description');
+        $product->category_id = $request->get('category_id');
+
+        if ($request->hasFile('images')) {
+            $files = $request->file('images');
+            foreach ($files as $file) {
+                $image = new Image();
+                $fileName = $file->getClientOriginalName();
+                $name = md5(($fileName) . date('Y-m-d H:i:s')) . '.' . $file->getClientOriginalExtension();
+                $image->product_id = $product->id;
+                $image->url = $name;
+                $image->size = number_format($file->getSize() / 1024, 1) . ' Kb';
+                $image->format = $file->getClientOriginalExtension();
+                $file->move('upload/images/products/', $name);
+                $image->save();
+            }
+        }
+
+        $product->save();
+
+        return redirect()->route('admin.product.list')->with([
+            'level' => 'success',
+            'message' => 'Update product successful!'
+        ]);
     }
 
     /**

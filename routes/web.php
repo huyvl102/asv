@@ -30,6 +30,7 @@ Route::group(['middleware' => ['verified']], function () {
             Route::get('/', 'Admin\ProductController@index')->name('list');
             Route::get('/create', 'Admin\ProductController@create')->name('create');
             Route::get('/edit/{id?}', 'Admin\ProductController@edit')->name('edit');
+            Route::get('/deleteImage/{id?}', 'Admin\ProductController@deleteImage')->name('deleteImage');
             Route::delete('/delete/{id?}', 'Admin\ProductController@destroy')->name('delete');
             Route::post('/store', 'Admin\ProductController@store')->name('store');
             Route::patch('/update/{id?}', 'Admin\ProductController@update')->name('update');
