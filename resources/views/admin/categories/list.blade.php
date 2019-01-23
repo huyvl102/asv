@@ -57,13 +57,13 @@
 
                         <th>
                             <div class="table-header">
-                                <span class="column-title">Name</span>
+                                <span class="column-title">Image</span>
                             </div>
                         </th>
 
                         <th>
                             <div class="table-header">
-                                <span class="column-title">Image</span>
+                                <span class="column-title">Name</span>
                             </div>
                         </th>
 
@@ -93,8 +93,7 @@
                                     >
                                 </td>
                                 <td>{{$category->name}}</td>
-                                <td>{{$category->parentName ? $category->parentName : 'cha'}}
-                                </td>
+                                <td>{{$category->parentName ? $category->parentName : 'cha'}}</td>
                                 <td>
                                     {!! Form::open(['method' => 'DELETE','id' => 'delete-form-'.$category->id ,'route' => ['admin.category.delete', $category->id]]) !!}
                                     <a href="{{ route('admin.category.edit',['id'=>$category->id]) }}"

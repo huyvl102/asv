@@ -78,7 +78,7 @@ class CategoryController extends Controller
 
             return redirect()->route('admin.category.list')->with([
                 'level' => 'success',
-                'message' => 'Create category successful !'
+                'message' => 'Create category successful!'
             ]);
         } catch (Exception $e) {
             abort(500);
@@ -145,7 +145,7 @@ class CategoryController extends Controller
 
         return redirect()->route('admin.category.list')->with([
             'level' => 'success',
-            'message' => 'Update category successful !'
+            'message' => 'Update category successful!'
         ]);
     }
 
@@ -163,7 +163,7 @@ class CategoryController extends Controller
 
         return back()->with([
             'level' => 'success',
-            'message' => 'Deleted category successfully.'
+            'message' => 'Deleted category successfully!'
         ]);
     }
 }

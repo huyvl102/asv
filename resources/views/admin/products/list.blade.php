@@ -15,24 +15,26 @@
                         </div>
                         <div class="logo-text">
                             <div class="h4">Products</div>
-                            <div class="">Total Products: 20</div>
+                            <div class="">Total Products: {{$products->total()}}</div>
                         </div>
                     </div>
                 </div>
                 <!-- / APP TITLE -->
                 <!-- SEARCH -->
                 <div class="col search-wrapper px-2">
-
-                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <button type="button" class="btn btn-icon">
-                                                <i class="icon icon-magnify"></i>
-                                            </button>
-                                        </span>
-                        <input id="products-search-input" type="text" class="form-control" placeholder="Search"
-                               aria-label="Search"/>
-                    </div>
-
+                    <form action="{{route('admin.product.list')}}" method="GET" role="search">
+                        <div class="input-group">
+                            <input id="products-search-input" name="keyword" type="text" class="form-control"
+                                   placeholder="Search"
+                                   aria-label="Search"
+                                   value="@if(Request::has('keyword')){{ Request::get('keyword') }}@endif"/>
+                            <span class="input-group-btn">
+                            <button type="submit" class="btn btn-icon">
+                                <i class="icon icon-magnify"></i>
+                            </button>
+                        </span>
+                        </div>
+                    </form>
                 </div>
                 <!-- / SEARCH -->
 
@@ -74,24 +76,6 @@
 
                         <th>
                             <div class="table-header">
-                                <span class="column-title">Price</span>
-                            </div>
-                        </th>
-
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">Quantity</span>
-                            </div>
-                        </th>
-
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">Active</span>
-                            </div>
-                        </th>
-
-                        <th>
-                            <div class="table-header">
                                 <span class="column-title">Actions</span>
                             </div>
                         </th>
@@ -99,166 +83,70 @@
                     </thead>
 
                     <tbody>
-
-                    <tr>
-                        <td>1</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Printed Dress</td>
-                        <td>Dresses</td>
-                        <td>10.24</td>
-                        <td>3</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Green Skirt</td>
-                        <td>Skirts</td>
-                        <td>24.62</td>
-                        <td>92</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Printed Dress</td>
-                        <td>Dresses</td>
-                        <td>49.29</td>
-                        <td>60</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>4</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>White T-Shirt</td>
-                        <td>T-Shirts</td>
-                        <td>69.11</td>
-                        <td>101</td>
-                        <td>false</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>5</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Red Hoodie</td>
-                        <td>Hoodies</td>
-                        <td>10.24</td>
-                        <td>19</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>6</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Red Hoodie</td>
-                        <td>Hoodies</td>
-                        <td>59.36</td>
-                        <td>101</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>7</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Summer Dress</td>
-                        <td>Dresses</td>
-                        <td>64.21</td>
-                        <td>34</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>8</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Black Shoes</td>
-                        <td>Shoes</td>
-                        <td>69.73</td>
-                        <td>4</td>
-                        <td>false</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>9</td>
-                        <td>
-                            <img class="product-image" src="../assets/images/ecommerce/product-image-placeholder.png">
-                        </td>
-                        <td>Yellow Bag</td>
-                        <td>Bags</td>
-                        <td>57.37</td>
-                        <td>58</td>
-                        <td>true</td>
-                        <td>
-                            <button type="button" class="btn btn-icon" aria-label="Product details">
-                                <i class="icon icon-pencil s-4"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @if(isset($products) && $products->count() > 0)
+                        @foreach ($products as $key => $product)
+                            <tr>
+                                <td>{{$product->id}}</td>
+                                <td>
+                                    <img class="product-image" style="width: 52px"
+                                         src="{{url('upload/images/categories')}}/{{$product->image->first()->url}}"
+                                         onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                    >
+                                </td>
+                                <td>{{$product->name}}</td>
+                                <td>{{$product->category->name}}</td>
+                                <td>
+                                    {!! Form::open(['method' => 'DELETE','id' => 'delete-form-'.$product->id ,'route' => ['admin.product.delete', $product->id]]) !!}
+                                    <a href="{{ route('admin.product.edit',['id'=>$product->id]) }}"
+                                       class="btn btn-icon"
+                                       aria-label="Product details">
+                                        <i class="icon icon-pencil s-4"></i>
+                                    </a>
+                                    <button type="button" data="{{$product->id}}"
+                                            class="btn btn-icon confirm_delete" aria-label="Product details">
+                                        <i class="icon icon-trash s-4"></i>
+                                    </button>
+                                    {!! Form::close() !!}
+                                </td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr class="odd">
+                            <td valign="top" colspan="5" class="dataTables_empty">No data available in table</td>
+                        </tr>
+                    @endif
                     </tbody>
                 </table>
+                <div class="dataTables_footer">
+                    <div class="pull-right">
+                        {{ $products->appends(['keyword' => Request::get('keyword')])->links() }}
+                    </div>
+                </div>
             </div>
         </div>
         <!-- / CONTENT -->
     </div>
 @endsection
 @section('script')
-    <script type="text/javascript" src="{{ asset('assets/js/apps/e-commerce/products/products.js') }}"></script>
+    <script>
+        $(".confirm_delete").click(function (event) {
+            event.preventDefault();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.value) {
+                    var data = $(this).attr('data');
+                    $("#delete-form-" + data).submit();
+                } else {
+                    return false
+                }
+            })
+        });
+    </script>
 @endsection

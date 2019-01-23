@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\ProductRequest;
 use App\Models\Category;
+use App\Models\Image;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,9 +16,22 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.products.list');
+        $data['products'] = Product::where('products.is_deleted', false)->orderBy('products.id', 'DESC');
+
+        if ($request->has('keyword')) {
+            $keyword = $request->get('keyword');
+            $data['products'] = $data['products']->where(
+                function ($query) use ($keyword) {
+                    $query->orWhere('products.name', 'like', "%$keyword%");
+                }
+            );
+        }
+
+        $data['products'] = $data['products']->orderBy('products.id')->paginate(15);
+
+        return view('admin.products.list', $data)->with('i', ($request->input('page', 1) - 1) * 10);;
     }
 
     /**
@@ -39,7 +54,35 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        dd($request);
+        try {
+            $product = new Product();
+            $product->name = $request->input('name');
+            $product->slug = str_slug($request->input('name'));
+            $product->description = $request->input('description');
+            $product->category_id = $request->get('category_id');
+            $product->save();
+            if ($request->hasFile('images')) {
+                $files = $request->file('images');
+                foreach ($files as $file) {
+                    $image = new Image();
+                    $fileName = $file->getClientOriginalName();
+                    $name = md5(($fileName) . date('Y-m-d H:i:s')) . '.' . $file->getClientOriginalExtension();
+                    $image->product_id = $product->id;
+                    $image->url = $name;
+                    $image->size = number_format($file->getSize() / 1024, 1) . ' Kb';
+                    $image->format = $file->getClientOriginalExtension();
+                    $file->move('upload/images/products/', $name);
+                    $image->save();
+                }
+            }
+
+            return redirect()->route('admin.product.list')->with([
+                'level' => 'success',
+                'message' => 'Create product successful!'
+            ]);
+        } catch (Exception $e) {
+            abort(500);
+        }
     }
 
     /**
