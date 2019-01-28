@@ -89,7 +89,7 @@
                                 <td>{{$product->id}}</td>
                                 <td>
                                     <img class="product-image" style="width: 52px"
-                                         src="{{url('upload/images/products')}}/{{$product->image->first()->url}}"
+                                         src="{{url('upload/images/products')}}/{{$product->image->first()['url']}}"
                                          onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
                                     >
                                 </td>

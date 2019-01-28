@@ -102,7 +102,7 @@
                                     UPDATE MY ACCOUNT
                                 </button>
 
-                                <a href="{{ route('admin.home') }}" class="btn btn-light fuse-ripple-ready">
+                                <a href="{{ route('admin.product.list') }}" class="btn btn-light fuse-ripple-ready">
                                     CANCEL
                                 </a>
                             </div>

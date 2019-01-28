@@ -15,14 +15,6 @@
 
         <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
 
-            <li class="nav-item">
-                <a class="nav-link ripple {{ request()->is('admin') ? 'active' : '' }}" href="{{ route('admin.home') }}"
-                   data-url="index.html">
-                    <i class="icon s-4 icon-tile-four"></i>
-                    <span>Project Dashboard</span>
-                </a>
-            </li>
-
             <li class="nav-item" role="tab" id="heading-ecommerce">
 
                 <a class="nav-link ripple with-arrow " data-toggle="collapse"

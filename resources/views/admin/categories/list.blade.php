@@ -88,12 +88,12 @@
                                 <td>{{$category->id}}</td>
                                 <td>
                                     <img class="product-image" style="width: 52px"
-                                          src="{{url('upload/images/categories')}}/{{$category->image->url}}"
+                                          src="{{url('upload/images/categories/'.$category->image['url'])}}"
                                           onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
                                     >
                                 </td>
                                 <td>{{$category->name}}</td>
-                                <td>{{$category->parentName ? $category->parentName : 'cha'}}</td>
+                                <td>{{$category->parentName ? $category->parentName : 'parent'}}</td>
                                 <td>
                                     {!! Form::open(['method' => 'DELETE','id' => 'delete-form-'.$category->id ,'route' => ['admin.category.delete', $category->id]]) !!}
                                     <a href="{{ route('admin.category.edit',['id'=>$category->id]) }}"
