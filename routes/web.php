@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'product', 'as' => 'product.'], function () {
+    Route::get('/{id?}', 'HomeController@product')->name('product');
+    Route::get('detail/{id?}', 'HomeController@detail')->name('detail');
+});
 
 Route::group(['middleware' => ['verified']], function () {
     Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => array('auth')], function () {

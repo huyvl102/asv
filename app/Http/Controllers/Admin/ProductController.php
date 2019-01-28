@@ -41,7 +41,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $data['categories'] = Category::where('is_deleted', false)->orderBy('id', 'DESC')->get();
+        $data['categories'] = Category::where('is_deleted', false)->where('parent_id', '!=', null)->orderBy('id', 'DESC')->get();
 
         return view('admin.products.create', $data);
     }
@@ -117,7 +117,7 @@ class ProductController extends Controller
     {
         $data['product'] = Product::findOrFail($id);
 
-        $data['categories'] = Category::where('is_deleted', false)->orderBy('id', 'DESC')->get();
+        $data['categories'] = Category::where('is_deleted', false)->where('parent_id', '!=', null)->orderBy('id', 'DESC')->get();
 
         $data['images'] = Image::where('product_id', $id)->get();
 

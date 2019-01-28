@@ -78,7 +78,7 @@
 
                             <div class="form-group">
                                 <img class="product-image" style="width: 100px"
-                                     src="{{url('upload/images/categories')}}/{{$category->image->url}}"
+                                     src="{{url('upload/images/categories')}}/{{$category->image['url']}}"
                                      onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
                                 >
                             </div>

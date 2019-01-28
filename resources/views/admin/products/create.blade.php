@@ -38,7 +38,8 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea name="description" class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"
+                                <textarea name="description"
+                                          class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"
                                           aria-describedby="product description"
                                           rows="5">{{old('description')}}</textarea>
                                 <label>Product Description</label>
@@ -57,7 +58,8 @@
                                         <option value="">Select category</option>
                                         @foreach($categories as $item)
                                             <option
-                                                value="{{ $item->id }}" {{ old('category_id') == $item->id ? 'selected' : '' }}>{{ $item->name }}
+                                                value="{{ $item->id }}" {{ old('category_id') == $item->id ? 'selected' : '' }}>
+                                                {{ $item->name }}
                                             </option>
                                         @endforeach
                                     </select>

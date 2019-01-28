@@ -44,7 +44,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $data['categoryParent'] = Category::where('is_deleted', false)->where('parent_id', null)->orderBy('id', 'DESC')->get();
+        $data['categoryParent'] = Category::where('is_deleted', false)->where('parent_id', null)->get();
 
         return view('admin.categories.create', $data);
     }
@@ -106,7 +106,7 @@ class CategoryController extends Controller
     {
         $data['category'] = Category::findOrFail($id);
 
-        $data['categoryParent'] = Category::where('is_deleted', false)->where('parent_id', null)->orderBy('id', 'DESC')->get();
+        $data['categoryParent'] = Category::where('is_deleted', false)->where('parent_id', null)->get();
 
         return view('admin.categories.edit', $data);
     }
@@ -124,22 +124,31 @@ class CategoryController extends Controller
         $category->name = $request->input('name');
         $category->slug = str_slug($request->input('name'));
         $category->parent_id = $request->get('parent_id');
-
         if ($request->hasFile('image')) {
-            $image = public_path('upload/images/categories/' . $category->image->url);
-            if (strlen($category->image->url) > 0 && file_exists($image)) {
+            $image = public_path('upload/images/categories/' . $category->image['url']);
+            if (strlen($category->image['url']) > 0 && file_exists($image)) {
                 unlink($image);
             }
             $file = $request->file('image');
             $fileName = $file->getClientOriginalName();
             $name = md5(($fileName) . date('Y-m-d H:i:s')) . '.' . $file->getClientOriginalExtension();
-            $imageBefore = Image::where('url', $category->image->url)->first();
-            $imageBefore->category_id = $category->id;
-            $imageBefore->url = $name;
-            $imageBefore->size = number_format($file->getSize() / 1024, 1) . ' Kb';
-            $imageBefore->format = $file->getClientOriginalExtension();
-            $file->move('upload/images/categories/', $name);
-            $imageBefore->save();
+            $imageBefore = Image::where('url', $category->image['url'])->first();
+            if (isset($imageBefore)) {
+                $imageBefore->category_id = $category->id;
+                $imageBefore->url = $name;
+                $imageBefore->size = number_format($file->getSize() / 1024, 1) . ' Kb';
+                $imageBefore->format = $file->getClientOriginalExtension();
+                $file->move('upload/images/categories/', $name);
+                $imageBefore->save();
+            } else {
+                $newImage = new Image();
+                $newImage->category_id = $category->id;
+                $newImage->url = $name;
+                $newImage->size = number_format($file->getSize() / 1024, 1) . ' Kb';
+                $newImage->format = $file->getClientOriginalExtension();
+                $file->move('upload/images/categories/', $name);
+                $newImage->save();
+            }
         }
         $category->save();
 

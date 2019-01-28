@@ -13,6 +13,8 @@
                 @include('admin.layouts.toolbar')
             @endauth
             <div class="content custom-scrollbar">
+                @yield('style')
+
                 @yield('content')
 
                 @yield('script')
