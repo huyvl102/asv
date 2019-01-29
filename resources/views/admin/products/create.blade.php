@@ -36,12 +36,12 @@
                                     </div>
                                 @endif
                             </div>
-
                             <div class="form-group">
-                                <textarea name="description"
+                                <textarea name="description" id="editor1" rows="10" cols="80"
                                           class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"
                                           aria-describedby="product description"
-                                          rows="5">{{old('description')}}</textarea>
+                                          rows="5">{{old('description')}}
+                                </textarea>
                                 <label>Product Description</label>
                                 @if ($errors->has('description'))
                                     <div class="invalid-feedback">
@@ -100,4 +100,9 @@
         </div>
         <!-- / CONTENT -->
     </div>
+@endsection
+@section('script')
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
 @endsection

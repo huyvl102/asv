@@ -36,7 +36,7 @@
                         <div class="product-info">
                             <h1>CHI TIẾT MÁY</h1>
                             <p>
-                                {{$product->description}}
+                                {!! $product->description !!}
                             </p>
                         </div>
                     </div>
@@ -57,6 +57,7 @@
                             </div>
                         </div>
                     @endforeach
+
                 </div>
             </div>
         </section>

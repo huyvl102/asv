@@ -59,7 +59,7 @@ class CategoryController extends Controller
     {
         try {
             $category = new Category();
-            $category->name = $request->input('name');
+            $category->name = strtoupper($request->input('name'));
             $category->slug = str_slug($request->input('name'));
             $category->parent_id = $request->get('parent_id');
             $category->save();
@@ -121,7 +121,7 @@ class CategoryController extends Controller
     public function update(CategoryRequest $request, $id)
     {
         $category = Category::findOrFail($id);
-        $category->name = $request->input('name');
+        $category->name = strtoupper($request->input('name'));
         $category->slug = str_slug($request->input('name'));
         $category->parent_id = $request->get('parent_id');
         if ($request->hasFile('image')) {

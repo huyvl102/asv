@@ -40,10 +40,11 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea name="description"
+                                <textarea name="description" id="editor1" rows="10" cols="80"
                                           class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"
                                           aria-describedby="product description"
-                                          rows="5">{{old('name',isset($product->description) ? $product->description:'')}}</textarea>
+                                          rows="5">{!!old('name',isset($product->description) ? $product->description:'')!!}
+                                </textarea>
                                 <label>Product Description</label>
                                 @if ($errors->has('description'))
                                     <div class="invalid-feedback">
@@ -119,6 +120,8 @@
 @endsection
 @section('script')
     <script>
+        CKEDITOR.replace( 'editor1' );
+
         $(".confirm_delete").click(function (event) {
             event.preventDefault();
             Swal.fire({

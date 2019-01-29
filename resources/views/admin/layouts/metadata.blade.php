@@ -14,3 +14,4 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
 <link type="text/css" rel="stylesheet" href="{{ asset('assets/js/apps/sweetalert2/dist/sweetalert2.min.css') }}">
+

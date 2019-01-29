@@ -9,6 +9,7 @@
     <meta name="copyright" content="" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:image" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/picture/logo-top.jpg') }}" />
     <!--link css-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">

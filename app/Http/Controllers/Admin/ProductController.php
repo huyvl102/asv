@@ -41,7 +41,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $data['categories'] = Category::where('is_deleted', false)->where('parent_id', '!=', null)->orderBy('id', 'DESC')->get();
+        $data['categories'] = Category::where('is_deleted', false)->where('parent_id', '!=', null)->get();
 
         return view('admin.products.create', $data);
     }
@@ -56,7 +56,7 @@ class ProductController extends Controller
     {
         try {
             $product = new Product();
-            $product->name = $request->input('name');
+            $product->name = strtoupper($request->input('name'));
             $product->slug = str_slug($request->input('name'));
             $product->description = $request->input('description');
             $product->category_id = $request->get('category_id');
@@ -117,7 +117,7 @@ class ProductController extends Controller
     {
         $data['product'] = Product::findOrFail($id);
 
-        $data['categories'] = Category::where('is_deleted', false)->where('parent_id', '!=', null)->orderBy('id', 'DESC')->get();
+        $data['categories'] = Category::where('is_deleted', false)->where('parent_id', '!=', null)->get();
 
         $data['images'] = Image::where('product_id', $id)->get();
 
@@ -134,7 +134,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::findOrFail($id);
-        $product->name = $request->input('name');
+        $product->name = strtoupper($request->input('name'));
         $product->slug = str_slug($request->input('name'));
         $product->description = $request->input('description');
         $product->category_id = $request->get('category_id');

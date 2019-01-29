@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
-            $table->string('description');
+            $table->longText('description');
             $table->integer('category_id');
             $table->integer('is_deleted')->default(false);
             $table->timestamps();

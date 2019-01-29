@@ -46,76 +46,78 @@
             <!-- / HEADER -->
 
             <div class="page-content-card">
-                <table id="e-commerce-categories-table" class="table dataTable">
-                    <thead>
-                    <tr>
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">ID</span>
-                            </div>
-                        </th>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="table-header">
+                                    <span class="column-title">ID</span>
+                                </div>
+                            </th>
 
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">Image</span>
-                            </div>
-                        </th>
+                            <th>
+                                <div class="table-header">
+                                    <span class="column-title">Image</span>
+                                </div>
+                            </th>
 
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">Name</span>
-                            </div>
-                        </th>
+                            <th>
+                                <div class="table-header">
+                                    <span class="column-title">Name</span>
+                                </div>
+                            </th>
 
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">Parent</span>
-                            </div>
-                        </th>
+                            <th>
+                                <div class="table-header">
+                                    <span class="column-title">Parent</span>
+                                </div>
+                            </th>
 
-                        <th>
-                            <div class="table-header">
-                                <span class="column-title">Actions</span>
-                            </div>
-                        </th>
-                    </tr>
-                    </thead>
-
-                    <tbody>
-                    @if(isset($categories) && $categories->count() > 0)
-                        @foreach ($categories as $key => $category)
-                            <tr>
-                                <td>{{$category->id}}</td>
-                                <td>
-                                    <img class="product-image" style="width: 52px"
-                                          src="{{url('upload/images/categories/'.$category->image['url'])}}"
-                                          onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                                    >
-                                </td>
-                                <td>{{$category->name}}</td>
-                                <td>{{$category->parentName ? $category->parentName : 'parent'}}</td>
-                                <td>
-                                    {!! Form::open(['method' => 'DELETE','id' => 'delete-form-'.$category->id ,'route' => ['admin.category.delete', $category->id]]) !!}
-                                    <a href="{{ route('admin.category.edit',['id'=>$category->id]) }}"
-                                       class="btn btn-icon"
-                                       aria-label="Product details">
-                                        <i class="icon icon-pencil s-4"></i>
-                                    </a>
-                                    <button type="button" data="{{$category->id}}"
-                                            class="btn btn-icon confirm_delete" aria-label="Product details">
-                                        <i class="icon icon-trash s-4"></i>
-                                    </button>
-                                    {!! Form::close() !!}
-                                </td>
-                            </tr>
-                        @endforeach
-                    @else
-                        <tr class="odd">
-                            <td valign="top" colspan="4" class="dataTables_empty">No data available in table</td>
+                            <th>
+                                <div class="table-header">
+                                    <span class="column-title">Actions</span>
+                                </div>
+                            </th>
                         </tr>
-                    @endif
-                    </tbody>
-                </table>
+                        </thead>
+
+                        <tbody>
+                        @if(isset($categories) && $categories->count() > 0)
+                            @foreach ($categories as $key => $category)
+                                <tr>
+                                    <td>{{$category->id}}</td>
+                                    <td>
+                                        <img class="product-image" style="width: 52px"
+                                             src="{{url('upload/images/categories/'.$category->image['url'])}}"
+                                             onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                        >
+                                    </td>
+                                    <td>{{$category->name}}</td>
+                                    <td>{{$category->parentName ? $category->parentName : 'parent'}}</td>
+                                    <td>
+                                        {!! Form::open(['method' => 'DELETE','id' => 'delete-form-'.$category->id ,'route' => ['admin.category.delete', $category->id]]) !!}
+                                        <a href="{{ route('admin.category.edit',['id'=>$category->id]) }}"
+                                           class="btn btn-icon"
+                                           aria-label="Product details">
+                                            <i class="icon icon-pencil s-4"></i>
+                                        </a>
+                                        <button type="button" data="{{$category->id}}"
+                                                class="btn btn-icon confirm_delete" aria-label="Product details">
+                                            <i class="icon icon-trash s-4"></i>
+                                        </button>
+                                        {!! Form::close() !!}
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr class="odd">
+                                <td valign="top" colspan="4" class="dataTables_empty">No data available in table</td>
+                            </tr>
+                        @endif
+                        </tbody>
+                    </table>
+                </div>
                 <div class="dataTables_footer">
                     <div class="pull-right">
                         {{ $categories->appends(['keyword' => Request::get('keyword')])->links() }}

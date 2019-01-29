@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -44,8 +43,7 @@ class HomeController extends Controller
         $data['otherProduct'] = Product::where('category_id', $data['product']->category_id)
             ->where('id', '!=', $data['product']->id)
             ->where('is_deleted', false)
-            ->limit(3)
-            ->get();
+            ->get()->random(3);
 
         return view('detail', $data);
     }
