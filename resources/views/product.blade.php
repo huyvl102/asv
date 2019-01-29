@@ -17,17 +17,19 @@
                     <div class="product-child">
                         <h3 class="title-child"><span>{{$category->name}}</span></h3>
                         <div class="row">
-
-                            <div class="col-md-4">
-                                <div class="product-item">
-                                    <div class="images-p">
-                                        <a href="product-detail.html" title="" class="product-image"
-                                           style="background: url(images/picture/10.png) no-repeat center /cover"></a>
+                            @foreach($category->product as $product)
+                                <div class="col-md-4">
+                                    <div class="product-item">
+                                        <div class="images-p">
+                                            <a href="{{ route('product.detail',['id'=>$product->id]) }}" title="" class="product-image"
+                                               style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                            ></a>
+                                        </div>
+                                        <h4><a href="{{ route('product.detail',['id'=>$product->id]) }}" title="">{{$product->name}}</a></h4>
                                     </div>
-                                    <h4><a href="product-detail.html" title="">Cắt laser theo biên dạng ống</a></h4>
                                 </div>
-                            </div>
-
+                            @endforeach
                         </div>
                     </div>
                 @endforeach

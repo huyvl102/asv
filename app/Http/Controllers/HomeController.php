@@ -34,9 +34,6 @@ class HomeController extends Controller
 
         $data['categories'] = Category::where('parent_id', $id)->where('is_deleted', false)->get();
 
-        foreach ($data['categories'] as $item) {
-            $data['products'][$item->id] = Product::where('category_id', $item->id)->where('is_deleted', false)->get();
-        }
         return view('product', $data);
     }
 
