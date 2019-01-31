@@ -58,7 +58,7 @@
                     </div>
                     <div class="advantages-item advantages-item-13">
                         <div class="advantages-image"></div>
-                        <h3>Value </h3>
+                        <h3>Value  </h3>
                     </div>
                 </div>
             </div>

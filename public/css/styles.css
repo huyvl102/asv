@@ -171,6 +171,7 @@
 .advantages {
     background: #d8d8d8 url("../images/picture/Metal.png") no-repeat center /cover;
     padding: 35px 0 80px;
+    height: 426px;
 }
 .advantages-wrapper {
     padding: 0 85px;
@@ -354,11 +355,17 @@ h2.title-i span:before {
 .commitment .col-md-4:last-child {
     border: none;
 }
-.commitment-item:hover {
+.commitment .col-md-4:hover {
+    padding: 180px 0 70px 0;
+}
+.commitment .col-md-4:hover .commitment-item {
     background: #712a21;
     border-radius: 8px;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.19);
     margin-top: -20px;
+}
+.commitment {
+    height: 565px;
 }
 .images-p {
     border-radius: 4px;
@@ -486,9 +493,15 @@ h2.title-i span:before {
     display: block;
 }
 #sync2 .owl-item img {
+    border: 2px solid  transparent;
     border-radius: 4px;
     height: 120px;
     object-fit: cover;
+    opacity: 0.6;
+}
+#sync2 .owl-item.current img {
+    border-color: #712a21;
+    opacity: 1;
 }
 #sync1 .owl-item  {
     padding: 15px;
@@ -591,6 +604,26 @@ h2.title-i span:before {
 }
 .about-slider .owl-item a {
     display: block;
+}
+.logo img {
+    height: 50px;
+    object-fit: cover;
+}
+header {
+    transition: all ease-in-out 0.3s;
+}
+header.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+header.fixed .header-top {
+    display: none;
+}
+header.fixed .header-main {
+    padding: 15px 0;
 }
 /*Footer*/
 footer{

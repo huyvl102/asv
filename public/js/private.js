@@ -205,7 +205,12 @@ jQuery(function ($) {
             sync1.data('owl.carousel').to(number, 300, true);
         });
     });
-
-
+    $(document).scroll(function () {
+        if ($(this).scrollTop() >= 51) {
+            $('header').addClass('fixed')
+        }else {
+            $('header').removeClass('fixed')
+        }
+    });
 
 });

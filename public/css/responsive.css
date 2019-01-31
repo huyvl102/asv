@@ -35,6 +35,12 @@
     .about-index-text {
         padding-left: 0;
     }
+    .plus-item {
+        background-position:  center right  !important;
+    }
+    .commitment {
+        height: 820px;
+    }
 }
 
 @media screen and (min-width: 768px){
@@ -392,5 +398,11 @@
     }
     .product-item h4 a {
         font-size: 18px;
+    }
+    .advantages, .commitment {
+        height: auto;
+    }
+    .commitment .col-md-4:hover .commitment-item {
+        margin-top: 0;
     }
 }
