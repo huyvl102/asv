@@ -50,10 +50,17 @@
                 <div class="row">
                     @foreach ($otherProduct as $key => $product)
                         <div class="col-md-4">
-                            <div class="images-p">
-                                <a href="{{ route('product.detail',['id'=>$product->id]) }}" title="" class="plus-item"
-                                   style="background: #fff url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat right bottom /cover"
-                                   onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"></a>
+                            <div class="product-item">
+                                <div class="images-p">
+                                    <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                       title=""
+                                       class="product-image"
+                                       style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                       onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                    ></a>
+                                </div>
+                                <h4><a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                       title="">{{$product->name}}</a></h4>
                             </div>
                         </div>
                     @endforeach
