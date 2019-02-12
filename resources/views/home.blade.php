@@ -4,7 +4,7 @@
     <main class="cd-main-content">
         <section class="banner text-right">
             <div class="container">
-                <h2>Công ty TNHH Công nghiệp và Thương mại ASV.</h2>
+                {{--<h2>Công ty TNHH Công nghiệp và Thương mại ASV.</h2>--}}
                 <h1>DỊCH VỤ CÓ TÂM - SẢN PHẨM CÓ TẦM.</h1>
             </div>
         </section>
@@ -45,24 +45,24 @@
                 </div>
             </div>
         </section>
-        <section class="advantages">
-            <div class="container">
-                <div class="advantages-wrapper flex-center">
-                    <div class="advantages-item advantages-item-11">
-                        <div class="advantages-image"></div>
-                        <h3>Accuracy </h3>
-                    </div>
-                    <div class="advantages-item advantages-item-12">
-                        <div class="advantages-image"></div>
-                        <h3>Speed </h3>
-                    </div>
-                    <div class="advantages-item advantages-item-13">
-                        <div class="advantages-image"></div>
-                        <h3>Value  </h3>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {{--<section class="advantages">--}}
+            {{--<div class="container">--}}
+                {{--<div class="advantages-wrapper flex-center">--}}
+                    {{--<div class="advantages-item advantages-item-11">--}}
+                        {{--<div class="advantages-image"></div>--}}
+                        {{--<h3>Accuracy </h3>--}}
+                    {{--</div>--}}
+                    {{--<div class="advantages-item advantages-item-12">--}}
+                        {{--<div class="advantages-image"></div>--}}
+                        {{--<h3>Speed </h3>--}}
+                    {{--</div>--}}
+                    {{--<div class="advantages-item advantages-item-13">--}}
+                        {{--<div class="advantages-image"></div>--}}
+                        {{--<h3>Value  </h3>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</section>--}}
         <section class="index-product" id="product">
             <h2 class="text-center title-i"><span><a href="product.html" title="">SẢN PHẨM</a> </span></h2>
             <div class="pro-wrapper">

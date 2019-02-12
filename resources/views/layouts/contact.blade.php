@@ -32,8 +32,10 @@
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
                         <h4>TEL/FAX</h4>
-                        <p>+84 24 3226 2986 /
-                            +84 24 3226 2987</p>
+                        <p>+84 24 3226 2986
+                            +84 24 3226 2987
+                            0949925888
+                        </p>
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>

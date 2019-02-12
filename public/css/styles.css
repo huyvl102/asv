@@ -619,9 +619,9 @@ header.fixed {
     top: 0;
     z-index: 9999;
 }
-header.fixed .header-top {
-    display: none;
-}
+/*header.fixed .header-top {*/
+    /*display: none;*/
+/*}*/
 header.fixed .header-main {
     padding: 15px 0;
 }
