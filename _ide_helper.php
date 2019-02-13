@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.7.26 on 2019-02-12 16:09:39.
+ * Generated for Laravel 5.7.26 on 2019-02-13 14:27:57.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -8384,7 +8384,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Returns the root path from which this request is executed.
          * 
-         * Suppose that an server.php file instantiates this request object:
+         * Suppose that an index.php file instantiates this request object:
          * 
          *  * http://localhost/index.php         returns an empty string
          *  * http://localhost/index.php/page    returns an empty string
@@ -8406,7 +8406,7 @@ namespace Illuminate\Support\Facades {
          * The base URL never ends with a /.
          * 
          * This is similar to getBasePath(), except that it also includes the
-         * script filename (e.g. server.php) if one exists.
+         * script filename (e.g. index.php) if one exists.
          *
          * @return string The raw URL (i.e. not urldecoded)
          * @static 
