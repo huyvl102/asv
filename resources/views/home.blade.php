@@ -64,11 +64,28 @@
             {{--</div>--}}
         {{--</section>--}}
         <section class="index-product" id="product">
-            <h2 class="text-center title-i"><span><a href="product.html" title="">SẢN PHẨM</a> </span></h2>
+            <h2 class="text-center title-i"><span><a href="#" title="">SẢN PHẨM</a> </span></h2>
             <div class="pro-wrapper">
                 @foreach ($categories as $key => $category)
-                    <div class="pro-item relative"
-                         style="background: url({{url('upload/images/categories/'.$category->image['url'])}}) no-repeat center /cover" onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';">
+                    {{--<div class="pro-item relative product-item"--}}
+                         {{--style="background: url({{url('upload/images/categories/'.$category->image['url'])}}) no-repeat center /cover" onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';">--}}
+                        {{--<div class="pro-abs flex-center-center absolute">--}}
+                            {{--<div class="pro-cache text-center">--}}
+                                {{--<p>0{{$category->id}}.</p>--}}
+                                {{--<h3>{{$category->name}}</h3>--}}
+                                {{--<p><a href="{{ route('product.product',['id'=>$category->id]) }}" title="">Chi tiết</a></p>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    <div class="pro-item relative product-item">
+                        <div class="images-p" style="height: 306px">
+                            <a href=""
+                               title=""
+                               class="product-image"
+                               style="background: url({{url('upload/images/categories/'.$category->image['url'])}}) no-repeat center /cover"
+                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                            ></a>
+                        </div>
                         <div class="pro-abs flex-center-center absolute">
                             <div class="pro-cache text-center">
                                 <p>0{{$category->id}}.</p>
