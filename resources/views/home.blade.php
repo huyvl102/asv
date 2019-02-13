@@ -79,12 +79,10 @@
                     {{--</div>--}}
                     <div class="pro-item relative product-item">
                         <div class="images-p" style="height: 306px">
-                            <a href=""
-                               title=""
-                               class="product-image"
+                            <div class="product-image"
                                style="background: url({{url('upload/images/categories/'.$category->image['url'])}}) no-repeat center /cover"
-                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                            ></a>
+                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';">
+                            </div>
                         </div>
                         <div class="pro-abs flex-center-center absolute">
                             <div class="pro-cache text-center">
