@@ -37,7 +37,7 @@
                                 vụ gia công tấm CNC, chế tạo máy, tự động hóa, cửa thép, cửa chống cháy
                                 và
                                 quạt công nghiệp. </p>
-                            <p>VỚI TRIẾT LÝ:“DỊCH VỤ CÓ TÂM - SẢN PHẨM CÓ TẦM” Công ty TNHH Công nghiệp
+                            <p>Với triết lý:“DỊCH VỤ CÓ TÂM - SẢN PHẨM CÓ TẦM” Công ty TNHH Công nghiệp
                                 và
                                 Thương mại ASV khẳng định sẽ luôn là đối tác song hành</p>
                         </div>

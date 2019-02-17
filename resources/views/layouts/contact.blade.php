@@ -34,6 +34,12 @@
                         <h4>TEL/FAX</h4>
                         <p>+84 24 3226 2986
                             +84 24 3226 2987
+                        </p>
+                    </div>
+                    <div class="store-content">
+                        <span class="store-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <h4 class="text-danger">HOTLINE</h4>
+                        <p>
                             +84 949 925 888
                         </p>
                     </div>
