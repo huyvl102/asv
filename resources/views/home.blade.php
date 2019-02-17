@@ -5,7 +5,7 @@
         <section class="banner text-right">
             <div class="container">
                 {{--<h2>Công ty TNHH Công nghiệp và Thương mại ASV.</h2>--}}
-                <h1>DỊCH VỤ CÓ TÂM - SẢN PHẨM CÓ TẦM.</h1>
+                <h1 style="font-size: 40px">DỊCH VỤ CÓ TÂM - SẢN PHẨM CÓ TẦM.</h1>
             </div>
         </section>
         <section class="about-index" id="about-us">
@@ -102,25 +102,19 @@
                     <div class="col-md-4">
                         <div class="commitment-item">
                             <h3>01</h3>
-                            <h2>Tư vấn miễn phí</h2>
+                            <h2>ACCURACY</h2>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="commitment-item">
                             <h3>02</h3>
-                            <h2>Đội ngũ kỹ sư và
-                                thợ thi công chuyên
-                                nghiệp, tâm huyết
-                                với nghề</h2>
+                            <h2>SPEED</h2>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="commitment-item">
                             <h3>03</h3>
-                            <h2>Bảo hành lâu dài</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <h2>VALUE</h2>
                         </div>
                     </div>
                 </div>
