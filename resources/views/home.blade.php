@@ -97,7 +97,7 @@
         </section>
         <section class="commitment">
             <div class="container">
-                <h2 class="text-center text-uppercase h2-abs">CAM KẾT CHẤT LƯỢNG</h2>
+                <h2 class="text-center text-uppercase h2-abs">CAM KẾT KHÁCH HÀNG</h2>
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <div class="commitment-item">

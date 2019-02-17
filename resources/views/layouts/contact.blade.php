@@ -34,7 +34,7 @@
                         <h4>TEL/FAX</h4>
                         <p>+84 24 3226 2986
                             +84 24 3226 2987
-                            0949925888
+                            +84 949 925 888
                         </p>
                     </div>
                     <div class="store-content">
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-6">
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0142955842234!2d105.80167301440747!3d21.03211399304086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab41b4c14119%3A0xe24a3445b699b5f1!2zNDYgxJDGsOG7nW5nIELGsOG7n2ksIE5n4buNYyBLaMOhbmgsIEJhIMSQw6xuaCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1548429747017" width="100%" height="482" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3720.1322297644915!2d105.7720189!3d21.1869055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134ff9f15cd06eb%3A0x6efbe95433fb4690!2zQ8O0bmcgVHkgVE5ISCBDw7RuZyBOZ2hp4buHcCBWw6AgVGjGsMahbmcgTeG6oWkgQVNW!5e0!3m2!1svi!2s!4v1550379332491" width="100%" height="482" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>

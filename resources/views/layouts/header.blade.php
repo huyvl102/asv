@@ -10,15 +10,25 @@
                     <div class="language relative">
                         <a href="" title=""><span>VNese</span><span class="fa fa-angle-right"></span></a>
                         <ul>
-                            <li><a href="" title="">VNese</a></li>
-                            <li><a href="" title="">English</a></li>
+                            <li>
+                                <a href="" title="">
+                                    <img alt="image" src="{{ asset('images/picture/Vietnam.png') }}">
+                                    Vietnam
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="">
+                                    <img alt="image" src="{{ asset('images/picture/England.png') }}">
+                                    English
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 col-lg-6 visible-desktop">
                     <div class="header-social">
                         <a href="https://business.facebook.com/Gia-c%C3%B4ng-c%C6%A1-kh%C3%AD-ch%C3%ADnh-x%C3%A1c-160759294493084" title="" class="fa fa-facebook"></a>
-                        <a href="#" title="" class="fa fa-google-plus"></a>
+                        <a href="#" title="" class="fa fa--plus"></a>
                         <a href="#" title="" class="fa fa-youtube-play"></a>
                     </div>
                 </div>
