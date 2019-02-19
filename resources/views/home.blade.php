@@ -101,20 +101,17 @@
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <div class="commitment-item">
-                            <h3>01</h3>
-                            <h2>ACCURACY</h2>
+                            <h2><span style="color: #e2695d">A</span>CCURACY</h2>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="commitment-item">
-                            <h3>02</h3>
-                            <h2>SPEED</h2>
+                            <h2><span style="color: #e2695d">S</span>PEED</h2>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="commitment-item">
-                            <h3>03</h3>
-                            <h2>VALUE</h2>
+                            <h2><span style="color: #e2695d">V</span>ALUE</h2>
                         </div>
                     </div>
                 </div>

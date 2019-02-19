@@ -1,8 +1,8 @@
 jQuery(function ($) {
-        $('.language > a').click(function (e) {
-            e.preventDefault();
-            $('.language ul').toggleClass('show')
-        })
+        // $('.language > a').click(function (e) {
+        //     e.preventDefault();
+        //     $('.language ul').toggleClass('show')
+        // })
         // Select all links with hashes
         $('a[href*="#"]')
         // Remove links that don't actually link to anything

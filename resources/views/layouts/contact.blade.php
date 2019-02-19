@@ -15,8 +15,7 @@
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                         <h4>NHÀ MÁY </h4>
-                        <p>Lô 29A, KCN Quang Minh, H. Mê Linh,
-                            TP. Hà Nội.</p>
+                        <p>Lô 29A, KCN Quang Minh, H. Mê Linh, Hà Nội.</p>
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
@@ -38,7 +37,7 @@
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                        <h4 class="text-danger">HOTLINE</h4>
+                        <h4 style="color: #e2695d">HOTLINE</h4>
                         <p>
                             +84 949 925 888
                         </p>

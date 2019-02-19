@@ -37,11 +37,11 @@
 .header-contact a:last-child {
     background: url("../images/icon/mail.png") left 20px center no-repeat;
 }
-.language > a {
-    background: url("../images/icon/earth.png") right 20px center no-repeat;
-    border-left: 1px solid #6f6e6e;
-    padding: 5px 0 5px 20px;
-}
+/*.language > a {*/
+    /*background: url("../images/icon/earth.png") right 20px center no-repeat;*/
+    /*border-left: 1px solid #6f6e6e;*/
+    /*padding: 5px 0 5px 20px;*/
+/*}*/
 .language > a .fa {
     margin-left: 42px;
 }
