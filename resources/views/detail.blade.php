@@ -5,9 +5,9 @@
         <section class="breadcrumbs">
             <div class="container">
                 <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="{{ route('home') }}">Trang chủ</a>
-                    <a class="breadcrumb-item" href="">Sản phẩm</a>
-                    <span class="breadcrumb-item active"> Chi tiết sản phẩm</span>
+                    <a class="breadcrumb-item" href="{{ route('home') }}">{{ __('messenger.Home') }}</a>
+                    <a class="breadcrumb-item" href="">{{ __('messenger.Products') }}</a>
+                    <span class="breadcrumb-item active">{{ __('messenger.Product_Detail') }}</span>
                 </nav>
             </div>
         </section>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-md-5">
                         <div class="product-info">
-                            <h1>CHI TIẾT MÁY</h1>
+                            <h1>{{ __('messenger.big_detail') }}</h1>
                             <p>
                                 {!! $product->description !!}
                             </p>
@@ -45,7 +45,7 @@
         </section>
         <section class="product-plus product-related">
             <div class="container">
-                <h2 class="text-center title-i"><span>SẢN PHẨM LIÊN QUAN</span></h2>
+                <h2 class="text-center title-i"><span>{{ __('messenger.Similar_Products') }}</span></h2>
                 <h3 class="title-child"><span>{{$product->category->name}}</span></h3>
                 <div class="row">
                     @foreach ($otherProduct as $key => $product)

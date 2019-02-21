@@ -21,25 +21,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="about-index-text">
-                            <h2>ASV - GIỚI THIỆU</h2>
-                            <p>Bắt đầu gia nhập thị trường từ năm 2002, CÔNG TY TNHH CÔNG NGHIỆP VÀ THƯƠNG
-                                MẠI ASV (tiền thân là CÔNG TY TNHH ĐA HÌNH) đã luôn cập nhật ứng dụng công
-                                nghệ trong sản xuất cơ khí tạo ra các sản phẩm có phẩm cấp được khách
-                                hàng
-                                (Đặc biệt là khách hàng FDI) đón nhận và đánh giá cao đáp ứng cho các lĩnh
-                                vực: Cơ khí chính xác, chế tạo máy và cơ khí xây dựng.</p>
-                            <p>Đến nay, công ty ASV đã đầu tư các trang thiết bị hiện đại mới 100% bao gồm:
-                                Các
-                                máy gia công cơ CNC, máy cắt laser CNC, máy chấn CNC... Chúng tôi đã cung cấp
-                                cho
-                                khách hàng các sản phẩm chất lượng cao bao gồm: Dịch vụ gia công cơ CNC,
-                                dịch
-                                vụ gia công tấm CNC, chế tạo máy, tự động hóa, cửa thép, cửa chống cháy
-                                và
-                                quạt công nghiệp. </p>
-                            <p>Với triết lý:“DỊCH VỤ CÓ TÂM - SẢN PHẨM CÓ TẦM” Công ty TNHH Công nghiệp
-                                và
-                                Thương mại ASV khẳng định sẽ luôn là đối tác song hành</p>
+                            <h2>{{ __('messenger.ASV_About_us') }}</h2>
+                            <p>{{ __('messenger.test_description1') }}</p>
+                            <p>{{ __('messenger.test_description2') }}</p>
+                            <p>{{ __('messenger.test_description3') }}</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +49,7 @@
             {{--</div>--}}
         {{--</section>--}}
         <section class="index-product" id="product">
-            <h2 class="text-center title-i"><span><a href="#" title="">SẢN PHẨM</a> </span></h2>
+            <h2 class="text-center title-i"><span><a href="#" title="">{{ __('messenger.big_products') }}</a> </span></h2>
             <div class="pro-wrapper">
                 @foreach ($categories as $key => $category)
                     {{--<div class="pro-item relative product-item"--}}
@@ -88,7 +73,7 @@
                             <div class="pro-cache text-center">
                                 <p>0{{$category->id}}.</p>
                                 <h3>{{$category->name}}</h3>
-                                <p><a href="{{ route('product.product',['id'=>$category->id]) }}" title="">Chi tiết</a></p>
+                                <p><a href="{{ route('product.product',['id'=>$category->id]) }}" title="">{{ __('messenger.Details') }}</a></p>
                             </div>
                         </div>
                     </div>
@@ -97,21 +82,21 @@
         </section>
         <section class="commitment">
             <div class="container">
-                <h2 class="text-center text-uppercase h2-abs">CAM KẾT KHÁCH HÀNG</h2>
+                <h2 class="text-center text-uppercase h2-abs">{{ __('messenger.CUSTOMER_COMMITMENT') }}</h2>
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <div class="commitment-item">
-                            <h2><span style="color: #e2695d">A</span>CCURACY</h2>
+                            <h2><span style="color: #e2695d">{{ __('messenger.Accuracy1') }}</span>{{ __('messenger.Accuracy2') }}</h2>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="commitment-item">
-                            <h2><span style="color: #e2695d">S</span>PEED</h2>
+                            <h2><span style="color: #e2695d">{{ __('messenger.Speed1') }}</span>{{ __('messenger.Speed2') }}</h2>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="commitment-item">
-                            <h2><span style="color: #e2695d">V</span>ALUE</h2>
+                            <h2><span style="color: #e2695d">{{ __('messenger.Value1') }}</span>{{ __('messenger.Value2') }}</h2>
                         </div>
                     </div>
                 </div>

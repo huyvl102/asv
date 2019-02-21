@@ -5,8 +5,8 @@
         <section class="breadcrumbs">
             <div class="container">
                 <nav class="breadcrumb">
-                    <a class="breadcrumb-item" href="{{ route('home') }}">Trang chủ</a>
-                    <span class="breadcrumb-item active">Sản phẩm</span>
+                    <a class="breadcrumb-item" href="{{ route('home') }}">{{ __('messenger.Home') }}</a>
+                    <span class="breadcrumb-item active">{{ __('messenger.Products') }}</span>
                 </nav>
             </div>
         </section>
@@ -37,7 +37,7 @@
                                     @endforeach
                                 @else
                                     <div class="product-child">
-                                        <h3 class="title-child"><span class="text-danger">Không có sản phẩm trong danh sách</span></h3>
+                                        <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
                                     </div>
                                 @endif
                             </div>
@@ -45,14 +45,14 @@
                     @endforeach
                 @else
                     <div class="product-child">
-                        <h3 class="title-child"><span class="text-danger">Không có sản phẩm trong danh sách</span></h3>
+                        <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
                     </div>
                 @endif
             </div>
         </section>
         <section class="product-plus">
             <div class="container">
-                <h2 class="text-center title-i"><span>SẢN PHẨM KHÁC</span></h2>
+                <h2 class="text-center title-i"><span>{{ __('messenger.Other_products') }}</span></h2>
                 <div class="row">
                     @foreach($otherCategory as $key=> $otherProduct)
                         <div class="pro-item relative"
@@ -64,7 +64,7 @@
                                     <h3>{{$otherProduct->name}}</h3>
                                     <p>
                                         <a href="{{ route('product.product',['id'=>$otherProduct->id]) }}" title="">
-                                            Chi tiết
+                                            {{ __('messenger.Details') }}
                                         </a>
                                     </p>
                                 </div>

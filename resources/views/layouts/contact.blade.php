@@ -1,27 +1,25 @@
 <section class="contact-us" id="contact-us">
     <div class="container">
-        <h2 class="contact-title title-general">LIÊN HỆ</h2>
+        <h2 class="contact-title title-general">{{ __('messenger.big_contact') }}</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="store">
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <h4>TRỤ SỞ</h4>
+                        <h4>{{ __('messenger.Headquarter') }}</h4>
                         <p>
-                            Số 46, ngách 32/2, đường Bưởi,
-                            P. Ngọc Khánh, Q. Ba Đình, TP. Hà Nội.
+                            {{ __('messenger.where1') }}
                         </p>
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <h4>NHÀ MÁY </h4>
-                        <p>Lô 29A, KCN Quang Minh, H. Mê Linh, Hà Nội.</p>
+                        <h4>{{ __('messenger.Factory') }} </h4>
+                        <p>{{ __('messenger.where2') }}</p>
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <h4>VĂN PHÒNG GIAO DỊCH</h4>
-                        <p>Số 48, đường Bưởi,
-                            P. Ngọc Khánh, Q. Ba Đình, TP. Hà Nội.</p>
+                        <h4>{{ __('messenger.Office') }}</h4>
+                        <p>{{ __('messenger.where3') }}</p>
                     </div>
 
                 </div>

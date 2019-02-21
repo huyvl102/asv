@@ -47,4 +47,12 @@ class HomeController extends Controller
 
         return view('detail', $data);
     }
+
+    public function changeLanguage($locale)
+    {
+        if (in_array($locale, \Config::get('app.locales'))) {
+            \Session::put('locale', $locale);
+        }
+        return redirect()->back();
+    }
 }

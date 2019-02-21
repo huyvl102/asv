@@ -9,9 +9,9 @@
                 </div>
                 <div class="col-md-9">
                     <ul class="policy flex-center-end">
-                        <li><a href="#">Dịch vụ khách hàng</a></li>
-                        <li><a href="#">Quy định đổi trả</a></li>
-                        <li><a href="#">Bảo hành bảo trì</a></li>
+                        <li><a href="#">{{ __('messenger.Customer_service') }}</a></li>
+                        <li><a href="#">{{ __('messenger.Barter_regulation') }}</a></li>
+                        <li><a href="#">{{ __('messenger.Warranty_Policy') }}</a></li>
                     </ul>
                 </div>
             </div>
