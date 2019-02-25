@@ -12,9 +12,9 @@
         </section>
         <section class="product-list">
             <div class="container">
-                <h2 class="text-center title-i"><span>{{$mainCategory->name}}</span></h2>
                 @if(isset($categories) && $categories->count() > 0)
                     @if(session()->has('locale') && session('locale') == 'en')
+                        <h2 class="text-center title-i"><span>{{$mainCategory->name_en}}</span></h2>
                         @foreach ($categories as $key => $category)
                             <div class="product-child">
                                 <h3 class="title-child"><span>{{$category->name}}</span></h3>
@@ -46,6 +46,7 @@
                             </div>
                         @endforeach
                     @else
+                        <h2 class="text-center title-i"><span>{{$mainCategory->name}}</span></h2>
                         @foreach ($categories as $key => $category)
                             <div class="product-child">
                                 <h3 class="title-child"><span>{{$category->name}}</span></h3>

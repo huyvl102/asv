@@ -13,9 +13,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="about-slider owl-carousel">
-                            <a href="#" title=""><img src="{{ asset('images/picture/about.png') }}" alt="" title="">
+                            <a href="#" title=""><img src="{{ asset('images/picture/slider1.jpg') }}" alt="" title="" style="height: 400px">
                             </a>
-                            <a href="#" title=""><img src="{{ asset('images/picture/about.png') }}" alt="" title="">
+                            <a href="#" title=""><img src="{{ asset('images/picture/slider2.jpg') }}" alt="" title="" style="height: 400px">
+                            </a>
+                            <a href="#" title=""><img src="{{ asset('images/picture/slider3.jpg') }}" alt="" title="" style="height: 400px">
+                            </a>
+                            <a href="#" title=""><img src="{{ asset('images/picture/slider4.jpg') }}" alt="" title="" style="height: 400px">
                             </a>
                         </div>
                     </div>
