@@ -60,6 +60,7 @@ class CategoryController extends Controller
         try {
             $category = new Category();
             $category->name = strtoupper($request->input('name'));
+            $category->name_en = strtoupper($request->input('name_en'));
             $category->slug = str_slug($request->input('name'));
             $category->parent_id = $request->get('parent_id');
             $category->save();
@@ -122,6 +123,7 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $category->name = strtoupper($request->input('name'));
+        $category->name_en = strtoupper($request->input('name_en'));
         $category->slug = str_slug($request->input('name'));
         $category->parent_id = $request->get('parent_id');
         if ($request->hasFile('image')) {

@@ -29,23 +29,50 @@
                                 <input name="name" type="text"
                                        class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
                                        aria-describedby="product name" value="{{old('name')}}">
-                                <label>Product Name</label>
+                                <label>Product Name (VN)</label>
                                 @if ($errors->has('name'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('name') }}
                                     </div>
                                 @endif
                             </div>
+
+                            <div class="form-group">
+                                <input name="name_en" type="text"
+                                       class="form-control {{ $errors->has('name_en') ? ' is-invalid' : '' }}"
+                                       aria-describedby="product name" value="{{old('name_en')}}">
+                                <label>Product Name (EN)</label>
+                                @if ($errors->has('name_en'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('name_en') }}
+                                    </div>
+                                @endif
+                            </div>
+
                             <div class="form-group">
                                 <textarea name="description" id="editor1" rows="10" cols="80"
                                           class="form-control {{ $errors->has('description') ? ' is-invalid' : '' }}"
                                           aria-describedby="product description"
                                           rows="5">{{old('description')}}
                                 </textarea>
-                                <label>Product Description</label>
+                                <label>Product Description (VN)</label>
                                 @if ($errors->has('description'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('description') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <textarea name="description_en" id="editor1" rows="10" cols="80"
+                                          class="form-control {{ $errors->has('description_en') ? ' is-invalid' : '' }}"
+                                          aria-describedby="product description"
+                                          rows="5">{{old('description_en')}}
+                                </textarea>
+                                <label>Product Description (EN)</label>
+                                @if ($errors->has('description_en'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('description_en') }}
                                     </div>
                                 @endif
                             </div>

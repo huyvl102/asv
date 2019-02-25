@@ -29,6 +29,7 @@ class CategoryRequest extends FormRequest
                 {
                     return [
                         'name' => 'required|max:255|unique:categories,name,' . null . ',id,is_deleted,0',
+                        'name_en' => 'required|max:255|unique:categories,name_en,' . null . ',id,is_deleted,0',
                         'image' => 'sometimes|mimes:jpeg,jpg,png,gif|max:100000'
                     ];
                 }
@@ -36,6 +37,7 @@ class CategoryRequest extends FormRequest
                 {
                     return [
                         'name' => 'required|max:255|unique:categories,name,' . $id . ',id,is_deleted,0',
+                        'name_en' => 'required|max:255|unique:categories,name_en,' . $id . ',id,is_deleted,0',
                         'image' => 'sometimes|mimes:jpeg,jpg,png,gif|max:100000'
                     ];
                 }
@@ -50,6 +52,9 @@ class CategoryRequest extends FormRequest
             'name.required' => 'Vui lòng nhập tên danh mục',
             'name.max' => 'Vui lòng nhập tên danh mục không quá 255 ký tự',
             'name.unique' => 'Tên danh mục đã tồn tại',
+            'name_en.required' => 'Vui lòng nhập tên danh mục',
+            'name_en.max' => 'Vui lòng nhập tên danh mục không quá 255 ký tự',
+            'name_en.unique' => 'Tên danh mục đã tồn tại',
             'image.mimes' => 'Ảnh chưa đúng định dạng jpeg,jpg,png',
             'image.max' => 'Ảnh quá dung lượng',
         ];

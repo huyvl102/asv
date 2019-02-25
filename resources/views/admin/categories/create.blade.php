@@ -29,10 +29,22 @@
                                 <input name="name" type="text"
                                        class="form-control {{ $errors->has('name') ? ' is-invalid' : '' }}"
                                        aria-describedby="product name" value="{{old('name')}}">
-                                <label>Category Name</label>
+                                <label>Category Name (VN)</label>
                                 @if ($errors->has('name'))
                                     <div class="invalid-feedback">
                                         {{ $errors->first('name') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <input name="name_en" type="text"
+                                       class="form-control {{ $errors->has('name_en') ? ' is-invalid' : '' }}"
+                                       aria-describedby="product name" value="{{old('name_en')}}">
+                                <label>Category Name (EN)</label>
+                                @if ($errors->has('name_en'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('name_en') }}
                                     </div>
                                 @endif
                             </div>

@@ -57,8 +57,10 @@ class ProductController extends Controller
         try {
             $product = new Product();
             $product->name = strtoupper($request->input('name'));
+            $product->name_en = strtoupper($request->input('name_en'));
             $product->slug = str_slug($request->input('name'));
             $product->description = $request->input('description');
+            $product->description_en = $request->input('description_en');
             $product->category_id = $request->get('category_id');
             $product->save();
             if ($request->hasFile('images')) {
@@ -135,8 +137,10 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
         $product->name = strtoupper($request->input('name'));
+        $product->name_en = strtoupper($request->input('name_en'));
         $product->slug = str_slug($request->input('name'));
         $product->description = $request->input('description');
+        $product->description_en = $request->input('description_en');
         $product->category_id = $request->get('category_id');
 
         if ($request->hasFile('images')) {
