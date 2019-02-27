@@ -73,17 +73,17 @@
                                 @endif
                             </div>
 
-                            <div class="form-group">
-                                <input name="image" type="file"
-                                       class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
-                                       aria-describedby="image">
-                                <label>Image</label>
-                                @if ($errors->has('image'))
-                                    <div class="invalid-feedback">
-                                        {{ $errors->first('image') }}
-                                    </div>
-                                @endif
-                            </div>
+                            {{--<div class="form-group">--}}
+                                {{--<input name="image" type="file"--}}
+                                       {{--class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"--}}
+                                       {{--aria-describedby="image">--}}
+                                {{--<label>Image</label>--}}
+                                {{--@if ($errors->has('image'))--}}
+                                    {{--<div class="invalid-feedback">--}}
+                                        {{--{{ $errors->first('image') }}--}}
+                                    {{--</div>--}}
+                                {{--@endif--}}
+                            {{--</div>--}}
 
                             <button type="submit" class="btn btn-secondary fuse-ripple-ready">
                                 SAVE

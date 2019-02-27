@@ -102,10 +102,12 @@
                                            aria-label="Product details">
                                             <i class="icon icon-pencil s-4"></i>
                                         </a>
+                                        @if($category->parent_id != null)
                                         <button type="button" data="{{$category->id}}"
                                                 class="btn btn-icon confirm_delete" aria-label="Product details">
                                             <i class="icon icon-trash s-4"></i>
                                         </button>
+                                        @endif
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>

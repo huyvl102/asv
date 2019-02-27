@@ -52,6 +52,7 @@
                                 @endif
                             </div>
 
+                            @if($category->parent_id != null)
                             <div class="form-group">
                                 @if (isset($categoryParent) && count($categoryParent))
                                     <select name="parent_id"
@@ -76,6 +77,8 @@
                                 @endif
                             </div>
 
+                            @else
+
                             <div class="form-group {{ $errors->has('image') ? ' is-invalid' : '' }}">
                                 <input name="image" type="file"
                                        class="form-control {{ $errors->has('image') ? ' is-invalid' : '' }}"
@@ -95,6 +98,7 @@
                                      onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
                                 >
                             </div>
+                            @endif
 
                             <button type="submit" class="btn btn-secondary fuse-ripple-ready">
                                 SAVE
