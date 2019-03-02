@@ -68,7 +68,7 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea name="description_en" id="editor1" rows="10" cols="80"
+                                <textarea name="description_en" id="editor2" rows="10" cols="80"
                                           class="form-control {{ $errors->has('description_en') ? ' is-invalid' : '' }}"
                                           aria-describedby="product description"
                                           rows="5">{!!old('description_en',isset($product->description_en) ? $product->description_en:'')!!}
@@ -149,6 +149,7 @@
 @section('script')
     <script>
         CKEDITOR.replace( 'editor1' );
+        CKEDITOR.replace( 'editor2' );
 
         $(".confirm_delete").click(function (event) {
             event.preventDefault();

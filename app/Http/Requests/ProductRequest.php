@@ -28,9 +28,9 @@ class ProductRequest extends FormRequest
             case 'POST':
                 {
                     return [
-                        'name' => 'required|max:255|unique:categories,name,' . null . ',id,is_deleted,0',
+                        'name' => 'required|max:255|unique:products,name,' . null . ',id,is_deleted,0',
                         'description' => 'required',
-                        'name_en' => 'required|max:255|unique:categories,name_en,' . null . ',id,is_deleted,0',
+                        'name_en' => 'required|max:255|unique:products,name_en,' . null . ',id,is_deleted,0',
                         'description_en' => 'required',
                         'category_id' => 'required',
                         'images' => 'required|max:100000'
@@ -39,12 +39,12 @@ class ProductRequest extends FormRequest
             case 'PATCH':
                 {
                     return [
-                        'name' => 'required|max:255|unique:categories,name,' . $id . ',id,is_deleted,0',
+                        'name' => 'required|max:255|unique:products,name,' . $id . ',id,is_deleted,0',
                         'description' => 'required',
-                        'name_en' => 'required|max:255|unique:categories,name_en,' . $id . ',id,is_deleted,0',
+                        'name_en' => 'required|max:255|unique:products,name_en,' . $id . ',id,is_deleted,0',
                         'description_en' => 'required',
                         'category_id' => 'required',
-                        'images' => 'required|max:100000'
+                        'images' => 'sometimes|max:100000'
                     ];
                 }
             default:

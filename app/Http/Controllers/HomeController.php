@@ -31,6 +31,8 @@ class HomeController extends Controller
 
         $data['otherCategory'] = Category::where('id', '!=', $id)->where('parent_id', null)->where('is_deleted', false)->get();
 
+        $data['products'] = Product::where('category_id', '=', $id)->where('is_deleted', false)->get();
+
         $data['categories'] = Category::where('parent_id', $id)->where('is_deleted', false)->get();
 
         return view('product', $data);

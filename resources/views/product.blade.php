@@ -12,9 +12,33 @@
         </section>
         <section class="product-list">
             <div class="container">
-                @if(isset($categories) && $categories->count() > 0)
-                    @if(session()->has('locale') && session('locale') == 'en')
-                        <h2 class="text-center title-i"><span>{{$mainCategory->name_en}}</span></h2>
+                @if(session()->has('locale') && session('locale') == 'en')
+                    <h2 class="text-center title-i"><span>{{$mainCategory->name_en}}</span></h2>
+                    @if(isset($products) && $products->count() > 0)
+                        <div class="product-child">
+                            <div class="row">
+                                @foreach ($products as $key => $product)
+                                    <div class="col-md-4">
+                                        <div class="product-item">
+                                            <div class="images-p">
+                                                <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                   title=""
+                                                   class="product-image"
+                                                   style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                                   onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                ></a>
+                                            </div>
+                                            <h4>
+                                                <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                   title="">{{$product->name_en}}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
+                    @if(isset($categories) && $categories->count() > 0)
                         @foreach ($categories as $key => $category)
                             <div class="product-child">
                                 <h3 class="title-child"><span>{{$category->name}}</span></h3>
@@ -46,7 +70,37 @@
                             </div>
                         @endforeach
                     @else
-                        <h2 class="text-center title-i"><span>{{$mainCategory->name}}</span></h2>
+                        <div class="product-child">
+                            <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
+                        </div>
+                    @endif
+                @else
+                    <h2 class="text-center title-i"><span>{{$mainCategory->name}}</span></h2>
+                    @if(isset($products) && $products->count() > 0)
+                        <div class="product-child">
+                            <div class="row">
+                                @foreach ($products as $key => $product)
+                                    <div class="col-md-4">
+                                        <div class="product-item">
+                                            <div class="images-p">
+                                                <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                   title=""
+                                                   class="product-image"
+                                                   style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                                   onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                ></a>
+                                            </div>
+                                            <h4>
+                                                <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                   title="">{{$product->name}}</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
+                    @if(isset($categories) && $categories->count() > 0)
                         @foreach ($categories as $key => $category)
                             <div class="product-child">
                                 <h3 class="title-child"><span>{{$category->name}}</span></h3>
@@ -77,11 +131,11 @@
                                 </div>
                             </div>
                         @endforeach
+                    @else
+                        <div class="product-child">
+                            <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
+                        </div>
                     @endif
-                @else
-                    <div class="product-child">
-                        <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
-                    </div>
                 @endif
             </div>
         </section>
