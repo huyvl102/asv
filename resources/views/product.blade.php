@@ -2,6 +2,7 @@
 
 @section('content')
     <main class="cd-main-content">
+        <br>
         <section class="breadcrumbs">
             <div class="container">
                 <nav class="breadcrumb">
@@ -10,6 +11,8 @@
                 </nav>
             </div>
         </section>
+        <br>
+        <br>
         <section class="product-list">
             <div class="container">
                 @if(session()->has('locale') && session('locale') == 'en')

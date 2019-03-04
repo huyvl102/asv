@@ -45,7 +45,7 @@ class HomeController extends Controller
         $data['otherProduct'] = Product::where('category_id', $data['product']->category_id)
             ->where('id', '!=', $data['product']->id)
             ->where('is_deleted', false)
-            ->get()->random(3);
+            ->get();
 
         return view('detail', $data);
     }

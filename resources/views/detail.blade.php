@@ -2,6 +2,7 @@
 
 @section('content')
     <main class="cd-main-content">
+        <br>
         <section class="breadcrumbs">
             <div class="container">
                 <nav class="breadcrumb">
@@ -11,36 +12,44 @@
                 </nav>
             </div>
         </section>
+        <br>
+        <br>
         <section class="product-detail">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="product-gallery">
-                            @foreach($product->image as $img)
-                                <div class="owl-carousel" id="sync1">
+                            <div class="owl-carousel" id="sync1">
+                                @foreach($product->image as $img)
                                     <a href="{{url('upload/images/products')}}/{{$img->url}}" data-fancybox="images"
                                        title=""><img
-                                            src="{{url('upload/images/products')}}/{{$img->url}}" alt="" title=""> </a>
-
-                                </div>
-                                <div class="owl-carousel" id="sync2">
+                                            src="{{url('upload/images/products')}}/{{$img->url}}" alt="" title=""
+                                            style="height: 400px">
+                                    </a>
+                                @endforeach
+                            </div>
+                            <div class="owl-carousel" id="sync2">
+                                @foreach($product->image as $img)
                                     <a href="" title="">
                                         <img src="{{url('upload/images/products')}}/{{$img->url}}" alt="" title="">
                                     </a>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="product-info">
-                            <h1>{{ __('messenger.big_detail') }}</h1>
-                            <p>
-                                @if(session()->has('locale') && session('locale') == 'en')
+                            @if(session()->has('locale') && session('locale') == 'en')
+                                <h1>{{$product->name_en}}</h1>
+                                <p>
                                     {!! $product->description_en !!}
-                                @else
+                                </p>
+                            @else
+                                <h1>{{$product->name}}</h1>
+                                <p>
                                     {!! $product->description !!}
-                                @endif
-                            </p>
+                                </p>
+                            @endif
                         </div>
                     </div>
                 </div>

@@ -206,7 +206,7 @@ jQuery(function ($) {
         });
     });
     $(document).scroll(function () {
-        if ($(this).scrollTop() >= 51) {
+        if ($(this).scrollTop() >= 1) {
             $('header').addClass('fixed')
         }else {
             $('header').removeClass('fixed')
