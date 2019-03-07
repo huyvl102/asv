@@ -610,7 +610,7 @@ h2.title-i span:before {
     object-fit: cover;
 }
 header {
-    transition: all ease-in-out 0.3s;
+    transition: all 0.25s ease-in;
 }
 header.fixed {
     position: fixed;

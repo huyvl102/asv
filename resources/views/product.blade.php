@@ -72,10 +72,10 @@
                                 </div>
                             </div>
                         @endforeach
-                    @else
-                        <div class="product-child">
-                            <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
-                        </div>
+                    {{--@else--}}
+                        {{--<div class="product-child">--}}
+                            {{--<h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>--}}
+                        {{--</div>--}}
                     @endif
                 @else
                     <h2 class="text-center title-i"><span>{{$mainCategory->name}}</span></h2>
@@ -134,10 +134,10 @@
                                 </div>
                             </div>
                         @endforeach
-                    @else
-                        <div class="product-child">
-                            <h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>
-                        </div>
+                    {{--@else--}}
+                        {{--<div class="product-child">--}}
+                            {{--<h3 class="title-child"><span class="text-danger">{{ __('messenger.empty') }}</span></h3>--}}
+                        {{--</div>--}}
                     @endif
                 @endif
             </div>

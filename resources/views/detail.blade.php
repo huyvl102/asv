@@ -58,9 +58,9 @@
         <section class="product-plus product-related">
             <div class="container">
                 <h2 class="text-center title-i"><span>{{ __('messenger.Similar_Products') }}</span></h2>
-                <h3 class="title-child"><span>{{$product->category->name}}</span></h3>
-                <div class="row">
-                    @if(session()->has('locale') && session('locale') == 'en')
+                @if(session()->has('locale') && session('locale') == 'en')
+                    <h3 class="title-child"><span>{{$product->category->name_en}}</span></h3>
+                    <div class="row">
                         @foreach ($otherProduct as $key => $product)
                             <div class="col-md-4">
                                 <div class="product-item">
@@ -77,7 +77,10 @@
                                 </div>
                             </div>
                         @endforeach
-                    @else
+                    </div>
+                @else
+                    <h3 class="title-child"><span>{{$product->category->name}}</span></h3>
+                    <div class="row">
                         @foreach ($otherProduct as $key => $product)
                             <div class="col-md-4">
                                 <div class="product-item">
@@ -94,8 +97,8 @@
                                 </div>
                             </div>
                         @endforeach
-                    @endif
-                </div>
+                    </div>
+                @endif
             </div>
         </section>
         @include('layouts.contact')
