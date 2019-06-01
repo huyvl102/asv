@@ -687,3 +687,9 @@ footer{
         margin-right: 40px;
     }
 }
+main{
+    padding-bottom: 60px;
+}
+footer{
+    display: none;
+}
