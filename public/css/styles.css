@@ -693,3 +693,6 @@ main{
 footer{
     display: none;
 }
+body{
+    font-size: 15px;
+}
