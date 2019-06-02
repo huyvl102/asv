@@ -7,7 +7,10 @@
                         <a href="#" title="">0949.925.888</a>
                         <a href="#" title="">contact@asvco.vn</a>
                     </div>
-                    <div class="language relative" style="display: flex">
+
+                </div>
+                <div class="col-md-3 col-lg-6 visible-desktop text-right">
+                    <div class="language relative">
                         <a href="{!! route('change-language', ['vn']) !!}" title="">
                             <img class="flag" src="{{ asset('images/picture/Vietnam.png') }}"
                                  style="padding-left: 10px">
@@ -17,8 +20,6 @@
                                  style="padding-left: 10px">
                         </a>
                     </div>
-                </div>
-                <div class="col-md-3 col-lg-6 visible-desktop">
                     <div class="header-social">
                         <a target="_blank" rel="noopener noreferrer"
                            href="https://www.facebook.com/Gia-c%C3%B4ng-c%C6%A1-kh%C3%AD-ch%C3%ADnh-x%C3%A1c-160759294493084"

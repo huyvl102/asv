@@ -696,4 +696,9 @@ footer{
 body{
     font-size: 15px;
 }
-
+.language{
+    display: inline-block;
+}
+.header-social{
+    display: inline-block;
+}
