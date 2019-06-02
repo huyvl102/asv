@@ -702,3 +702,8 @@ body{
 .header-social{
     display: inline-block;
 }
+.pro-abs p a{
+    background-color: transparent;
+    color: #fff;
+    text-decoration: underline;
+}
