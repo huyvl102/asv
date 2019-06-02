@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
+use Config;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
+use Session;
 
 class HomeController extends Controller
 {
@@ -16,7 +22,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
     public function index()
     {
@@ -25,6 +31,10 @@ class HomeController extends Controller
         return view('home', $data);
     }
 
+    /**
+     * @param $id
+     * @return Factory|View
+     */
     public function product($id)
     {
         $data['mainCategory'] = Category::findOrFail($id);
@@ -38,6 +48,10 @@ class HomeController extends Controller
         return view('product', $data);
     }
 
+    /**
+     * @param $id
+     * @return Factory|View
+     */
     public function detail($id)
     {
         $data['product'] = Product::findOrFail($id);
@@ -50,10 +64,14 @@ class HomeController extends Controller
         return view('detail', $data);
     }
 
+    /**
+     * @param $locale
+     * @return RedirectResponse
+     */
     public function changeLanguage($locale)
     {
-        if (in_array($locale, \Config::get('app.locales'))) {
-            \Session::put('locale', $locale);
+        if (in_array($locale, Config::get('app.locales'))) {
+            Session::put('locale', $locale);
         }
         return redirect()->back();
     }
