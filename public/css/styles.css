@@ -707,3 +707,6 @@ body{
     color: #fff;
     text-decoration: underline;
 }
+.product-item h4{
+    text-align: center;
+}
