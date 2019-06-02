@@ -74,7 +74,7 @@
 .header-nav li a {
     font-family: 'SFProText';
     font-size: 13px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .header-nav li a:hover, .header-nav li.active a {
     color: #712a21;
@@ -105,7 +105,7 @@
 .banner h1 {
     color: #fff;
     font-family: 'SFProDisplay';
-    font-weight: bold;
+    font-weight: normal;
     font-size: 32px;
     text-transform: uppercase;
 }
@@ -113,7 +113,7 @@
     color: #fff;
     font-family: 'SFProText';
     font-size: 20px;
-    font-weight: 600;
+    font-weight: normal;
     margin-bottom: 30px;
 }
 .about-index {
@@ -149,7 +149,7 @@
 .about-index-text h2 {
     font-family: 'SFProDisplay';
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 50px;
     position: relative;
 }
@@ -164,7 +164,7 @@
 }
 .about-index-text p{
     font-family: 'SFProDisplay';
-    font-weight: 500;
+    font-weight: normal;
     line-height: 1.53;
     margin-bottom: 20px;
 }
@@ -194,7 +194,7 @@
     color: #4c4b4b;
     font-family: 'SFProDisplay';
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.21;
     margin-top: 15px;
 }
@@ -244,7 +244,7 @@ h2.title-i {
 h2.title-i span {
     font-family: 'SFProDisplay';
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
     position: relative;
 }
 h2.title-i span:before {
@@ -286,7 +286,7 @@ h2.title-i span:before {
 }
 .pro-abs p:first-child {
     font-size: 34px;
-    font-weight: 600;
+    font-weight: normal;
     font-family: 'SFProText';
 }
 .pro-abs h3 {
@@ -305,7 +305,7 @@ h2.title-i span:before {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
     font-family: 'SFProText';
     font-size: 13px;
-    font-weight: 600;
+    font-weight: normal;
 }
 .pro-abs p a:hover {
     color: #712a21;
@@ -333,7 +333,7 @@ h2.title-i span:before {
 }
 .commitment h2 {
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
     font-family: 'SFProDisplay';
 }
 .commitment-item {
@@ -345,7 +345,7 @@ h2.title-i span:before {
 .commitment-item h3 {
     font-family: 'SFProText';
     font-size: 20px;
-    font-weight: 600;
+    font-weight: normal;
     margin-bottom: 38px;
 }
 .commitment .col-md-4 {
@@ -404,7 +404,7 @@ h2.title-i span:before {
     background: #fff;
     font-family: 'SFProText';
     font-size: 20px;
-    font-weight: 600;
+    font-weight: normal;
     padding: 0 15px 0 0;
     position: relative;
     z-index: 2;
@@ -419,7 +419,7 @@ h2.title-i span:before {
     color: #4c4b4b;
     font-family: 'SFProText';
     font-size: 20px;
-    font-weight: 600;
+    font-weight: normal;
 }
 .product-child {
     margin-bottom: 30px;
@@ -444,7 +444,7 @@ h2.title-i span:before {
 .plus-title a {
     font-family: 'SFProDisplay';
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.32;
 }
 .plus-title a span {
@@ -466,7 +466,7 @@ h2.title-i span:before {
     color: #fff;
     font-family: 'SFProText';
     font-size: 13px;
-    font-weight: 600;
+    font-weight: normal;
     margin: 123px 0 24px 20px;
 }
 .product-list {
@@ -476,7 +476,7 @@ h2.title-i span:before {
     background-color: #fafafa;
     font-family: 'SFProDisplay';
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .product-related .title-child:before {
     bottom: 17px;
@@ -513,7 +513,7 @@ h2.title-i span:before {
     color: #4c4b4b;
     font-family: 'SFProDisplay';
     font-size: 32px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 26px;
     position: relative;
 }
@@ -550,7 +550,7 @@ h2.title-i span:before {
 
 .title-general{
     font-family: 'SFProDisplay';
-    font-weight: bold;
+    font-weight: normal;
     font-size: 32px;
     letter-spacing: 0.4px;
     position: relative;
@@ -584,7 +584,7 @@ h2.title-i span:before {
 }
 
 .store-content h4{
-    font-weight: 700;
+    font-weight: normal;
     font-size: 20px;
     margin-bottom: 15px;
 }
