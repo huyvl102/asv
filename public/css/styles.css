@@ -52,7 +52,7 @@
     height: 100%;
 }
 .header-social a {
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 30px;
 }
 .header-main {
@@ -73,7 +73,7 @@
 }
 .header-nav li a {
     font-family: 'SFProText';
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
 }
 .header-nav li a:hover, .header-nav li.active a {
@@ -87,7 +87,7 @@
     border-radius: 6px;
     border: 1px solid transparent;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: normal;
     text-transform: uppercase;
     padding: 8px 35px;
@@ -106,13 +106,13 @@
     color: #fff;
     font-family: 'SFProDisplay';
     font-weight: bold;
-    font-size: 34px;
+    font-size: 32px;
     text-transform: uppercase;
 }
 .banner h2 {
     color: #fff;
     font-family: 'SFProText';
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -148,7 +148,7 @@
 }
 .about-index-text h2 {
     font-family: 'SFProDisplay';
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 50px;
     position: relative;
@@ -193,7 +193,7 @@
 .advantages-item h3 {
     color: #4c4b4b;
     font-family: 'SFProDisplay';
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     line-height: 1.21;
     margin-top: 15px;
@@ -243,7 +243,7 @@ h2.title-i {
 }
 h2.title-i span {
     font-family: 'SFProDisplay';
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     position: relative;
 }
@@ -285,13 +285,13 @@ h2.title-i span:before {
     transition: all ease-in-out 0.3s;
 }
 .pro-abs p:first-child {
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 600;
     font-family: 'SFProText';
 }
 .pro-abs h3 {
     font-family: 'SFProText';
-    font-size: 22px;
+    font-size: 20x;
     margin-bottom: 40px;
 }
 .pro-abs p a {
@@ -304,7 +304,7 @@ h2.title-i span:before {
     border-radius: 8px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
     font-family: 'SFProText';
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
 }
 .pro-abs p a:hover {
@@ -332,7 +332,7 @@ h2.title-i span:before {
     z-index: 2;
 }
 .commitment h2 {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     font-family: 'SFProDisplay';
 }
@@ -344,7 +344,7 @@ h2.title-i span:before {
 }
 .commitment-item h3 {
     font-family: 'SFProText';
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     margin-bottom: 38px;
 }
@@ -403,7 +403,7 @@ h2.title-i span:before {
 .title-child span {
     background: #fff;
     font-family: 'SFProText';
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     padding: 0 15px 0 0;
     position: relative;
@@ -418,7 +418,7 @@ h2.title-i span:before {
 .product-item h4 a {
     color: #4c4b4b;
     font-family: 'SFProText';
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
 }
 .product-child {
@@ -443,7 +443,7 @@ h2.title-i span:before {
 }
 .plus-title a {
     font-family: 'SFProDisplay';
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     line-height: 1.32;
 }
@@ -465,7 +465,7 @@ h2.title-i span:before {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
     color: #fff;
     font-family: 'SFProText';
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     margin: 123px 0 24px 20px;
 }
@@ -475,7 +475,7 @@ h2.title-i span:before {
 .product-related .title-child span{
     background-color: #fafafa;
     font-family: 'SFProDisplay';
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
 }
 .product-related .title-child:before {
@@ -512,7 +512,7 @@ h2.title-i span:before {
 .product-info h1 {
     color: #4c4b4b;
     font-family: 'SFProDisplay';
-    font-size: 34px;
+    font-size: 32px;
     font-weight: bold;
     margin-bottom: 26px;
     position: relative;
@@ -534,7 +534,7 @@ h2.title-i span:before {
 .breadcrumbs .breadcrumb{
     background: none;
     padding: 20px 0;
-    font-size: 15px;
+    font-size: 13px;
     font-family: "SFProText";
 
 }
@@ -551,7 +551,7 @@ h2.title-i span:before {
 .title-general{
     font-family: 'SFProDisplay';
     font-weight: bold;
-    font-size: 34px;
+    font-size: 32px;
     letter-spacing: 0.4px;
     position: relative;
     padding-bottom: 12px;
@@ -585,7 +585,7 @@ h2.title-i span:before {
 
 .store-content h4{
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
@@ -597,7 +597,7 @@ h2.title-i span:before {
 
 .store-icon i{
     color:  #ddd;
-    font-size: 22px;
+    font-size: 20px;
 }
 .contact-us {
     padding-top: 30px;
@@ -674,7 +674,7 @@ footer{
     }
 
     .store-content h4{
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -696,3 +696,4 @@ footer{
 body{
     font-size: 15px;
 }
+
