@@ -37,7 +37,7 @@
                         <span class="store-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
                         <h4 style="color: #e2695d">HOTLINE</h4>
                         <p>
-                            +84 949 925 888
+                            +84 94 992 5888
                         </p>
                     </div>
                     <div class="store-content">
