@@ -1,4 +1,5 @@
 <header>
+    <?php $current_lang = Config::get('app.locale'); ?>
     <section class="header-top">
         <div class="container">
             <div class="row">
@@ -11,14 +12,17 @@
                 </div>
                 <div class="col-md-3 col-lg-6 visible-desktop text-right">
                     <div class="language relative">
-                        <a href="{!! route('change-language', ['vn']) !!}" title="">
-                            <img class="flag" src="{{ asset('images/picture/Vietnam.png') }}"
-                                 style="padding-left: 10px">
-                        </a>
-                        <a href="{!! route('change-language', ['en']) !!}" title="">
-                            <img class="flag" src="{{ asset('images/picture/England.png') }}"
-                                 style="padding-left: 10px">
-                        </a>
+                        @if($current_lang === 'vn')
+                            <a href="{!! route('change-language', ['en']) !!}" title="">
+                                <img class="flag" src="{{ asset('images/picture/England.png') }}"
+                                     style="padding-left: 10px">
+                            </a>
+                        @else
+                            <a href="{!! route('change-language', ['vn']) !!}" title="">
+                                <img class="flag" src="{{ asset('images/picture/Vietnam.png') }}"
+                                     style="padding-left: 10px">
+                            </a>
+                        @endif
                     </div>
                     <div class="header-social">
                         <a target="_blank" rel="noopener noreferrer"
