@@ -106,6 +106,27 @@
                             </div>
 
                             <div class="form-group">
+                                <input name="thumbnail" type="file"
+                                       class="form-control {{ $errors->has('thumbnail') ? ' is-invalid' : '' }}"
+                                       aria-describedby="thumbnail">
+                                <label>Thumbnail</label>
+                                @if ($errors->has('thumbnail'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('thumbnail') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                @if(isset($product->thumbnail))
+                                    <img class="product-image" style="width: 100px"
+                                         src="{{url('upload/images/products')}}/{{$product->thumbnail}}"
+                                         onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                    >
+                                @endif
+                            </div>
+
+                            <div class="form-group">
                                 <input name="images[]" type="file" multiple
                                        class="form-control {{ $errors->has('images') ? ' is-invalid' : '' }}"
                                        aria-describedby="images">

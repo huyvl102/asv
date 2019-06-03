@@ -103,6 +103,18 @@
                             </div>
 
                             <div class="form-group">
+                                <input name="thumbnail" type="file"
+                                       class="form-control {{ $errors->has('thumbnail') ? ' is-invalid' : '' }}"
+                                       aria-describedby="thumbnail">
+                                <label>Thumbnail</label>
+                                @if ($errors->has('thumbnail'))
+                                    <div class="invalid-feedback">
+                                        {{ $errors->first('thumbnail') }}
+                                    </div>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
                                 <input name="images[]" type="file" multiple
                                        class="form-control {{ $errors->has('images') ? ' is-invalid' : '' }}"
                                        aria-describedby="images">

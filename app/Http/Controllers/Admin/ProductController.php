@@ -8,13 +8,15 @@ use App\Models\Image;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function index(Request $request)
     {
@@ -37,7 +39,7 @@ class ProductController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -49,12 +51,21 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param ProductRequest $request
+     * @return Response
      */
     public function store(ProductRequest $request)
     {
         try {
+
+            $name = '';
+            if ($request->hasFile('thumbnail')) {
+                $file = $request->file('thumbnail');
+                $fileName = $file->getClientOriginalName();
+                $name = md5(($fileName) . date('Y-m-d H:i:s')) . '.' . $file->getClientOriginalExtension();
+                $file->move('upload/images/products/', $name);
+            }
+
             $product = new Product();
             $product->name = strtoupper($request->input('name'));
             $product->name_en = strtoupper($request->input('name_en'));
@@ -62,7 +73,9 @@ class ProductController extends Controller
             $product->description = $request->input('description');
             $product->description_en = $request->input('description_en');
             $product->category_id = $request->get('category_id');
+            $product->thumbnail = $name;
             $product->save();
+
             if ($request->hasFile('images')) {
                 $files = $request->file('images');
                 foreach ($files as $file) {
@@ -91,7 +104,7 @@ class ProductController extends Controller
      * Display the specified resource.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function deleteImage($id)
     {
@@ -113,7 +126,7 @@ class ProductController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -129,9 +142,9 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @param ProductRequest $request
+     * @param int $id
+     * @return Response
      */
     public function update(ProductRequest $request, $id)
     {
@@ -142,6 +155,15 @@ class ProductController extends Controller
         $product->description = $request->input('description');
         $product->description_en = $request->input('description_en');
         $product->category_id = $request->get('category_id');
+
+        if ($request->hasFile('thumbnail')) {
+            $file = $request->file('thumbnail');
+
+            $fileName = $file->getClientOriginalName();
+            $name = md5(($fileName) . date('Y-m-d H:i:s')) . '.' . $file->getClientOriginalExtension();
+            $file->move('upload/images/products/', $name);
+            $product->thumbnail = $name;
+        }
 
         if ($request->hasFile('images')) {
             $files = $request->file('images');
@@ -170,7 +192,7 @@ class ProductController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
