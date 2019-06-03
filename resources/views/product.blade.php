@@ -24,6 +24,11 @@
                                     <div class="col-md-4">
                                         <div class="product-item">
                                             <div class="images-p">
+                                                @if($product->thumbnail)
+
+                                                @else
+
+                                                @endif
                                                 <a href="{{ route('product.detail',['id'=>$product->id]) }}"
                                                    title=""
                                                    class="product-image"
