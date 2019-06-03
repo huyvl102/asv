@@ -111,7 +111,7 @@
                                     @if(isset($category->product) && $category->product->count() > 0)
                                         @foreach($category->product as $product)
                                             <div class="col-md-4">
-                                                <div class="product-item">
+                                                <div class="product-item ">
                                                     <div class="images-p">
                                                         <a href="{{ route('product.detail',['id'=>$product->id]) }}"
                                                            title=""
@@ -148,7 +148,7 @@
                 <div class="row">
                     @if(session()->has('locale') && session('locale') == 'en')
                         @foreach($otherCategory as $key=> $otherProduct)
-                            <div class="pro-item relative"
+                            <div class="pro-item relative product-item"
                                  style="background: url({{url('upload/images/categories/'.$otherProduct->image['url'])}}) no-repeat center /cover"
                                  onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';">
                                 <div class="pro-abs flex-center-center absolute">
@@ -166,7 +166,7 @@
                         @endforeach
                     @else
                         @foreach($otherCategory as $key=> $otherProduct)
-                            <div class="pro-item relative"
+                            <div class="pro-item relative product-item"
                                  style="background: url({{url('upload/images/categories/'.$otherProduct->image['url'])}}) no-repeat center /cover"
                                  onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';">
                                 <div class="pro-abs flex-center-center absolute">

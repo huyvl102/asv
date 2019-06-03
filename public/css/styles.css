@@ -710,3 +710,6 @@ body{
 .product-item h4{
     text-align: center;
 }
+.product-item .pro-abs {
+    cursor: pointer;
+}

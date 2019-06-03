@@ -19,5 +19,13 @@
 
 @include('layouts.script')
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".product-item .pro-abs").click(function(){
+            var url = $(this).find('a').attr('href');
+            window.location.replace(url);
+        });
+    });
+</script>
 </body>
 </html>
