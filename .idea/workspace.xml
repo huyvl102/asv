@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f1c08c9-91b5-4b1f-b99d-af7bd895156e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,10 +56,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/product.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+            <state relative-caret-position="44">
+              <caret line="207" column="40" lean-forward="true" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
               <folding>
-                <element signature="e#1467#1585#0#HTML" expanded="true" />
+                <element signature="e#1492#1610#0#HTML" expanded="true" />
+                <element signature="e#2196#2314#0#HTML" expanded="true" />
+                <element signature="e#4367#4485#0#HTML" expanded="true" />
+                <element signature="e#4429#4547#0#HTML" expanded="true" />
+                <element signature="e#5842#5960#0#HTML" expanded="true" />
+                <element signature="e#8357#8475#0#HTML" expanded="true" />
+                <element signature="e#7810#7928#0#HTML" expanded="true" />
+                <element signature="e#11273#11391#0#HTML" expanded="true" />
+                <element signature="e#9901#10014#0#HTML" expanded="true" />
+                <element signature="e#11153#11266#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -589,12 +597,12 @@
       <workItem from="1559443250845" duration="330000" />
       <workItem from="1559459171231" duration="595000" />
       <workItem from="1559497290650" duration="3206000" />
-      <workItem from="1559537470961" duration="4083000" />
+      <workItem from="1559537470961" duration="4954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182314000" />
+    <option name="totallyTimeSpent" value="183185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -1005,10 +1013,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/product.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+        <state relative-caret-position="44">
+          <caret line="207" column="40" lean-forward="true" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
           <folding>
-            <element signature="e#1467#1585#0#HTML" expanded="true" />
+            <element signature="e#1492#1610#0#HTML" expanded="true" />
+            <element signature="e#2196#2314#0#HTML" expanded="true" />
+            <element signature="e#4367#4485#0#HTML" expanded="true" />
+            <element signature="e#4429#4547#0#HTML" expanded="true" />
+            <element signature="e#5842#5960#0#HTML" expanded="true" />
+            <element signature="e#8357#8475#0#HTML" expanded="true" />
+            <element signature="e#7810#7928#0#HTML" expanded="true" />
+            <element signature="e#11273#11391#0#HTML" expanded="true" />
+            <element signature="e#9901#10014#0#HTML" expanded="true" />
+            <element signature="e#11153#11266#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

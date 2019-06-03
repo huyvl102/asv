@@ -25,16 +25,21 @@
                                         <div class="product-item">
                                             <div class="images-p">
                                                 @if($product->thumbnail)
-
+                                                    <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                       title=""
+                                                       class="product-image"
+                                                       style="background: url({{url('upload/images/products')}}/{{$product->thumbnail}}) no-repeat center /cover"
+                                                       onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                    ></a>
                                                 @else
-
+                                                    <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                       title=""
+                                                       class="product-image"
+                                                       style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                                       onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                    ></a>
                                                 @endif
-                                                <a href="{{ route('product.detail',['id'=>$product->id]) }}"
-                                                   title=""
-                                                   class="product-image"
-                                                   style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
-                                                   onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                                                ></a>
+
                                             </div>
                                             <h4>
                                                 <a href="{{ route('product.detail',['id'=>$product->id]) }}"
@@ -56,12 +61,22 @@
                                             <div class="col-md-4">
                                                 <div class="product-item">
                                                     <div class="images-p">
-                                                        <a href="{{ route('product.detail',['id'=>$product->id]) }}"
-                                                           title=""
-                                                           class="product-image"
-                                                           style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
-                                                           onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                                                        ></a>
+                                                        @if($product->thumbnail)
+                                                            <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                               title=""
+                                                               class="product-image"
+                                                               style="background: url({{url('upload/images/products')}}/{{$product->thumbnail}}) no-repeat center /cover"
+                                                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                            ></a>
+                                                        @else
+                                                            <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                               title=""
+                                                               class="product-image"
+                                                               style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                            ></a>
+                                                        @endif
+
                                                     </div>
                                                     <h4><a href="{{ route('product.detail',['id'=>$product->id]) }}"
                                                            title="">{{$product->name_en}}</a></h4>
@@ -91,12 +106,21 @@
                                     <div class="col-md-4">
                                         <div class="product-item">
                                             <div class="images-p">
-                                                <a href="{{ route('product.detail',['id'=>$product->id]) }}"
-                                                   title=""
-                                                   class="product-image"
-                                                   style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
-                                                   onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                                                ></a>
+                                                @if($product->thumbnail)
+                                                    <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                       title=""
+                                                       class="product-image"
+                                                       style="background: url({{url('upload/images/products')}}/{{$product->thumbnail}}) no-repeat center /cover"
+                                                       onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                    ></a>
+                                                @else
+                                                    <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                       title=""
+                                                       class="product-image"
+                                                       style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                                       onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                    ></a>
+                                                @endif
                                             </div>
                                             <h4>
                                                 <a href="{{ route('product.detail',['id'=>$product->id]) }}"
@@ -118,12 +142,21 @@
                                             <div class="col-md-4">
                                                 <div class="product-item ">
                                                     <div class="images-p">
-                                                        <a href="{{ route('product.detail',['id'=>$product->id]) }}"
-                                                           title=""
-                                                           class="product-image"
-                                                           style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
-                                                           onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
-                                                        ></a>
+                                                        @if($product->thumbnail)
+                                                            <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                               title=""
+                                                               class="product-image"
+                                                               style="background: url({{url('upload/images/products')}}/{{$product->thumbnail}}) no-repeat center /cover"
+                                                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                            ></a>
+                                                        @else
+                                                            <a href="{{ route('product.detail',['id'=>$product->id]) }}"
+                                                               title=""
+                                                               class="product-image"
+                                                               style="background: url({{url('upload/images/products')}}/{{$product->image->first()['url']}}) no-repeat center /cover"
+                                                               onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';"
+                                                            ></a>
+                                                        @endif
                                                     </div>
                                                     <h4><a href="{{ route('product.detail',['id'=>$product->id]) }}"
                                                            title="">{{$product->name}}</a></h4>
