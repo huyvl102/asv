@@ -16,6 +16,14 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css/photoswipe.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('default-skin/default-skin.css') }}">
+
     <!--Jquery library-->
     <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+
+    <script src="{{ asset('js/photoswipe.min.js') }}"></script>
+
+    <script src="{{ asset('js/photoswipe-ui-default.min.js') }}"></script>
 </head>
