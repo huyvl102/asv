@@ -713,3 +713,6 @@ body{
 .product-item .pro-abs {
     cursor: pointer;
 }
+.product-detail {
+    padding: 0;
+}

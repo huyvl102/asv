@@ -12,8 +12,6 @@
                 </nav>
             </div>
         </section>
-        <br>
-        <br>
         <section class="product-detail">
             <div class="container">
                 <div class="row">
