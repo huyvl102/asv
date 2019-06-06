@@ -11,6 +11,7 @@ return [
     'test_description3' => '',
     'Details' => 'Details',
     'CUSTOMER_COMMITMENT' => 'CUSTOMER COMMITMENT',
+    '3D' => '',
     'Accuracy1' => 'A',
     'Accuracy2' => 'CCURACY',
     'Speed1' => 'S',
