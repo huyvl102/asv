@@ -77,7 +77,6 @@
                             </div>
                             <div class="pro-abs flex-center-center absolute">
                                 <div class="pro-cache text-center">
-                                    <p>0{{$category->id}}.</p>
                                     <h3>{{$category->name_en}}</h3>
                                     <p><a href="{{ route('product.product',['id'=>$category->id]) }}"
                                           title="">{{ __('messenger.Details') }}</a></p>
@@ -96,7 +95,6 @@
                             </div>
                             <div class="pro-abs flex-center-center absolute">
                                 <div class="pro-cache text-center">
-                                    <p>0{{$category->id}}.</p>
                                     <h3>{{$category->name}}</h3>
                                     <p><a href="{{ route('product.product',['id'=>$category->id]) }}"
                                           title="">{{ __('messenger.Details') }}</a></p>
