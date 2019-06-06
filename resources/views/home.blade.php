@@ -90,7 +90,7 @@
                         <div class="pro-item relative product-item">
                             <div class="images-p" style="height: 306px">
                                 <div class="product-image"
-                                     style="`background: url({{url('upload/images/categories/'.$category->image['url'])}}) no-repeat center /cover"
+                                     style="background: url({{url('upload/images/categories/'.$category->image['url'])}}) no-repeat center /cover"
                                      onerror="this.onerror=null;this.src='{{ asset('assets/images/ecommerce/product-image-placeholder.png') }}';">
                                 </div>
                             </div>
