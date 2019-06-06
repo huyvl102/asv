@@ -11,8 +11,6 @@
                 </nav>
             </div>
         </section>
-        <br>
-        <br>
         <section class="product-list">
             <div class="container">
                 @if(session()->has('locale') && session('locale') == 'en')
