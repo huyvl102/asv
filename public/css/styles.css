@@ -719,3 +719,6 @@ body{
 .product-list{
     padding: 0;
 }
+header.fixed{
+    z-index: 9;
+}
