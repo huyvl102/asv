@@ -7,7 +7,7 @@
             <div class="container">
                 <nav class="breadcrumb">
                     <a class="breadcrumb-item" href="{{ route('home') }}">{{ __('messenger.Home') }}</a>
-                    <a class="breadcrumb-item" href="">{{ __('messenger.Products') }}</a>
+                    <a class="breadcrumb-item" href="{{ route('product.product',['id'=>$product->category_id]) }}">{{ __('messenger.Products') }}</a>
                     <span class="breadcrumb-item active">{{ __('messenger.Product_Detail') }}</span>
                 </nav>
             </div>
