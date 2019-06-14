@@ -29,21 +29,21 @@
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
                         <h4>TEL/FAX</h4>
-                        <p>+84 24 3226 2986
-                            +84 24 3226 2987
+                        <p><a href="tel:02432262986">+84 24 3226 2986</a>
+                            <a href="tel:02432262987">+84 24 3226 2987</a>
                         </p>
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
                         <h4 style="color: #e2695d">HOTLINE</h4>
                         <p>
-                            +84 94 992 5888
+                            <a href="tel:0949925888">+84 94 992 5888</a>
                         </p>
                     </div>
                     <div class="store-content">
                         <span class="store-icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                         <h4>MAIL</h4>
-                        <p>contact@asvco.vn</p>
+                        <p><a href="mailto:contact@asvco.vn">contact@asvco.vn</a></p>
                     </div>
                 </div>
             </div>
