@@ -722,3 +722,7 @@ body{
 header.fixed{
     z-index: 9;
 }
+.header-nav li a{
+    font-size: 15px;
+    text-transform: uppercase;
+}
