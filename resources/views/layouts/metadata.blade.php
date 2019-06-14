@@ -11,9 +11,11 @@
     <meta property="og:image" content="">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/picture/logo-top.jpg') }}" />
     <!--link css-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/languages.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/owl.carousel.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}">
+
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/photoswipe.css') }}">
