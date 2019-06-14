@@ -726,3 +726,6 @@ header.fixed{
     font-size: 15px;
     text-transform: uppercase;
 }
+h2.title-i span:before{
+    height: 2px;
+}
