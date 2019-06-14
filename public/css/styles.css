@@ -729,3 +729,10 @@ header.fixed{
 h2.title-i span:before{
     height: 2px;
 }
+.about-index {
+    padding: 60px 0;
+}
+
+.about-slider {
+    margin-top: 10px;
+}
