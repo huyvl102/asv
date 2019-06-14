@@ -2,7 +2,7 @@
 @import "fonts.css";
 
 body{
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
 }
 .header-top {
     background: #712a21;
@@ -75,7 +75,7 @@ body{
     margin-right: 30px;
 }
 .header-nav li a {
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 13px;
     font-weight: normal;
 }
@@ -107,14 +107,14 @@ body{
 }
 .banner h1 {
     color: #fff;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-weight: normal;
     font-size: 32px;
     text-transform: uppercase;
 }
 .banner h2 {
     color: #fff;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 30px;
@@ -150,7 +150,7 @@ body{
     padding-left: 70px;
 }
 .about-index-text h2 {
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 32px;
     font-weight: normal;
     margin-bottom: 50px;
@@ -166,7 +166,7 @@ body{
     left: 0;
 }
 .about-index-text p{
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-weight: normal;
     line-height: 1.53;
     margin-bottom: 20px;
@@ -195,7 +195,7 @@ body{
 }
 .advantages-item h3 {
     color: #4c4b4b;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 32px;
     font-weight: normal;
     line-height: 1.21;
@@ -245,7 +245,7 @@ h2.title-i {
     margin-bottom: 76px;
 }
 h2.title-i span {
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 32px;
     font-weight: normal;
     position: relative;
@@ -290,10 +290,10 @@ h2.title-i span:before {
 .pro-abs p:first-child {
     font-size: 34px;
     font-weight: normal;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
 }
 .pro-abs h3 {
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 20x;
     margin-bottom: 40px;
 }
@@ -306,7 +306,7 @@ h2.title-i span:before {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 13px;
     font-weight: normal;
 }
@@ -337,7 +337,7 @@ h2.title-i span:before {
 .commitment h2 {
     font-size: 32px;
     font-weight: normal;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
 }
 .commitment-item {
     height: 100%;
@@ -346,7 +346,7 @@ h2.title-i span:before {
     transition: all ease-in-out 0.3s;
 }
 .commitment-item h3 {
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 38px;
@@ -405,7 +405,7 @@ h2.title-i span:before {
 }
 .title-child span {
     background: #fff;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 20px;
     font-weight: normal;
     padding: 0 15px 0 0;
@@ -420,7 +420,7 @@ h2.title-i span:before {
 }
 .product-item h4 a {
     color: #4c4b4b;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 20px;
     font-weight: normal;
 }
@@ -445,7 +445,7 @@ h2.title-i span:before {
     padding-top: 20px;
 }
 .plus-title a {
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 32px;
     font-weight: normal;
     line-height: 1.32;
@@ -467,7 +467,7 @@ h2.title-i span:before {
     border-radius: 8px;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
     color: #fff;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 13px;
     font-weight: normal;
     margin: 123px 0 24px 20px;
@@ -477,7 +477,7 @@ h2.title-i span:before {
 }
 .product-related .title-child span{
     background-color: #fafafa;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 32px;
     font-weight: normal;
 }
@@ -514,7 +514,7 @@ h2.title-i span:before {
 }
 .product-info h1 {
     color: #4c4b4b;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-size: 32px;
     font-weight: normal;
     margin-bottom: 26px;
@@ -538,8 +538,7 @@ h2.title-i span:before {
     background: none;
     padding: 20px 0;
     font-size: 13px;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
-
+    font-family: HelveticaWorld, sans-serif;
 }
 
 .breadcrumbs .breadcrumb .breadcrumb-item{
@@ -552,7 +551,7 @@ h2.title-i span:before {
 }
 
 .title-general{
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     font-weight: normal;
     font-size: 32px;
     letter-spacing: 0.4px;
@@ -575,7 +574,7 @@ h2.title-i span:before {
 .about-content{
     line-height: 26px;
     letter-spacing: -0.4px;
-    font-family: helvetica-w01-light,helvetica-w02-light,sans-serif;
+    font-family: HelveticaWorld, sans-serif;
     margin-bottom: 60px;
 }
 
