@@ -14,7 +14,7 @@
                     <div class="language relative">
                         @if($current_lang === 'vn')
                             <a href="{!! route('change-language', ['en']) !!}" title="">
-                                <img class="flag"  src="{{ asset('images/picture/eng1.png') }}"
+                                <img class="flag"  src="{{ asset('images/picture/eng.png') }}"
                                      style="padding-left: 10px">
                             </a>
                         @else
