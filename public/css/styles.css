@@ -738,3 +738,12 @@ h2.title-i span:before{
 .about-slider {
     margin-top: 10px;
 }
+.about-index-text h2:before{
+    height: 2px;
+}
+.title-general:after{
+    height: 2px;
+}
+.product-info h1:before{
+    height: 2px;
+}
