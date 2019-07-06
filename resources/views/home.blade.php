@@ -108,8 +108,8 @@
         <section class="commitment">
             <div class="container">
                 <h2 class="text-center text-uppercase h2-abs">
-                    <span style="color: #e2695d">{{ __('messenger.3D') }}</span>
-                    {{ __('messenger.CUSTOMER_COMMITMENT') }}</h2>
+                    {{ __('messenger.CUSTOMER_COMMITMENT') }}
+                    <span style="color: #e2695d">{{ __('messenger.3D') }}</span></h2>
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <div class="commitment-item">
