@@ -802,6 +802,10 @@ h2.title-i a{
     font-size: 24px;
     font-weight: 300;
 }
+h2.title-i span{
+    font-size: 24px;
+    font-weight: 300;
+}
 @media only screen and (max-width: 768px) {
     .pro-item{
         height: 220px !important;
