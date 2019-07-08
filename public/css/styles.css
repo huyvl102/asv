@@ -768,5 +768,9 @@ h2.title-i span:before{
     .product-item .images-p{
         height: 220px !important;
     }
+    .owl-carousel .owl-item img{
+        object-fit: cover;
+        object-position: center center;
+    }
 }
 
