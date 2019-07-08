@@ -765,6 +765,43 @@ h2.contact-title{
     font-size: 24px;
     font-weight: 300;
 }
+.store-content h4{
+    font-size: 15px;
+}
+.commitment .col-md-4 {
+    padding: 150px 0 50px;
+}
+
+.commitment .col-md-4:hover {
+    padding: 150px 0 70px 0;
+}
+
+.commitment .col-md-4:hover .commitment-item {
+    margin-top: -10px;
+}
+.commitment{
+    height: 320px
+}
+.index-product{
+    padding: 40px 0 20px;
+}
+.product-item{
+    margin-bottom: 6px;
+}
+h2.title-i span:before{
+    bottom: -10px;
+}
+h2.title-i{
+    margin-bottom: 32px;
+}
+h2.title-i a{
+    font-size: 24px;
+    font-weight: 300;
+}
+.about-index-text h2{
+    font-size: 24px;
+    font-weight: 300;
+}
 @media only screen and (max-width: 768px) {
     .pro-item{
         height: 220px !important;
