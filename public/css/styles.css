@@ -761,3 +761,12 @@ h2.title-i span:before{
 .h2-abs{
     font-weight: 300;
 }
+@media only screen and (max-width: 768px) {
+    .pro-item{
+        height: 220px !important;
+    }
+    .product-item .images-p{
+        height: 220px !important;
+    }
+}
+
