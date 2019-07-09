@@ -817,6 +817,21 @@ h2.title-i span{
 .cd-main-content h1{
     font-weight: 300;
 }
+.store-content h4{
+    color: #212121;
+}
+.product-detail .product-info p{
+    font-size: 14px;
+    font-weight: 300;
+}
+.about-index-text p{
+    font-size: 14px;
+    font-weight: 300;
+}
+.pro-item {
+    max-width: calc((100% - 2 * 6px) /3 - 8px);
+    margin-right: 8px;
+}
 @media only screen and (max-width: 768px) {
     .pro-item{
         height: 220px !important;
