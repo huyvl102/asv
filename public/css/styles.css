@@ -832,6 +832,18 @@ h2.title-i span{
     max-width: calc((100% - 2 * 6px) /3 - 8px);
     margin-right: 8px;
 }
+.about-index-text p{
+    font-size: 15px;
+}
+.product-item h4 a{
+    font-size: 18px;
+}
+.product-info h1{
+    font-size: 18px;
+}
+.product-detail .product-info p{
+    fonts-size: 15px;
+}
 @media only screen and (max-width: 768px) {
     .pro-item{
         height: 220px !important;

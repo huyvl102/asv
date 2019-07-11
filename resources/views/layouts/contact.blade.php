@@ -49,7 +49,12 @@
             </div>
             <div class="col-md-6">
                 <div class="map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3720.1322297644915!2d105.7720189!3d21.1869055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134ff9f15cd06eb%3A0x6efbe95433fb4690!2zQ8O0bmcgVHkgVE5ISCBDw7RuZyBOZ2hp4buHcCBWw6AgVGjGsMahbmcgTeG6oWkgQVNW!5e0!3m2!1svi!2s!4v1550379332491" width="100%" height="482" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3720.1322297644915!2d105.7720189!3d21.1869055!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134ff9f15cd06eb%3A0x6efbe95433fb4690!2zQ8O0bmcgVHkgVE5ISCBDw7RuZyBOZ2hp4buHcCBWw6AgVGjGsMahbmcgTeG6oWkgQVNW!5e0!3m2!1svi!2s!4v1550379332491"
+                        width="100%"
+                        height="320"
+                        frameborder="0"
+                        style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
